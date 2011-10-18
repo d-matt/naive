@@ -1,0 +1,12 @@
+<figure id="image_wrapper">
+  {if isset($previous)}<div id="go_to_prev_holder"></div>{/if}
+  <img id="subject" src="{$SRC_IMG}" alt="{$ALT_IMG}" style="width:{$WIDTH_IMG}px;height:{$HEIGHT_IMG}px;">
+  {if isset($next)}<div id="go_to_next_holder"></div>{/if}
+  <figcaption>
+    {$current.TITLE|@replace:'"':' '}
+    {if isset($COMMENT_IMG)}
+    <blockquote>{$COMMENT_IMG|@strip_tags:false|@replace:'"':' '}</blockquote>
+    {/if}
+    <div class="imageNumber right">{$PHOTO}</div>
+  </figcaption>
+</figure>

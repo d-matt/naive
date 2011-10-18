@@ -1,0 +1,631 @@
+@base_color : #F5F5F5;
+@color1 : #FFAA00;
+@color2 : spin(hsl(hue(@base_color), 33%, 66%),180); 
+@background_color: @base_color;
+@background_dark: @base_color; 
+@menu_color: @base_color; 
+@text_color: darken(@base_color, 40%);
+@text_color_hover: @color1; 
+@border_color: darken(@base_color, 20%);
+
+body {
+  background-color: @background_dark;
+  color: @text_color;
+}
+
+
+/*******************/
+/* Generic Classes */
+/*******************/
+a {
+  color: @text_color;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: @text_color_hover;
+  }
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  color: @text_color;
+}
+
+ul {
+  list-style: none;
+}
+
+fieldset {
+  border: 1px solid @border_color;
+}
+
+.rot(@angle) {
+  -webkit-transform: rotate(@angle);
+  -moz-transform: rotate(@angle);
+  -ms-transform: rotate(@angle);
+  -o-transform: rotate(@angle);
+  transform: rotate(@angle);
+}
+
+.rot-neg-90 {
+  .rot(90deg);
+}
+
+.rot-270 {
+  .rot(270deg);
+}
+
+.error, .alert, .notice, .success, .info {
+  margin: 1em;
+}
+
+.inline {
+  display: inline;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: @text_color) {
+  box-shadow        : @arguments;
+  -moz-box-shadow   : @arguments;
+  -webkit-box-shadow: @arguments;
+}
+
+.border-radius (@top, @right, @bottom, @left) {
+  border-radius        : @arguments;
+  -moz-border-radius   : @arguments;
+  -webkit-border-radius: @arguments;
+}
+
+.new {
+  @c: @color2;
+  color: @c;//#D7DF01;
+  font-weight: normal; 
+  text-shadow:0px 0px 2px lighten(@c, 20%);//#D7DF01;
+  -webkit-text-shadow: 0px 0px 2px lighten(@c, 20%);
+}
+
+/**********/
+/* header */
+/**********/
+header {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-variant: normal;
+  padding: 1em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid @border_color;
+  h2 {
+    font-weight: bold;
+  }
+}
+
+.header_notes {
+  display: none;
+}
+
+#the_page {
+  background-color: @background_dark;
+}
+
+#content {
+  padding: 10px 30px 10px 30px;
+  background-color: @background_color;
+  &.one_col {
+    margin-left    : 0;
+  }
+  &.two_col {
+    margin-left    : @menubar_width;
+  }
+}
+
+.titrePage {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+  h2 {
+    margin         : 1em 0;
+    display        : inline;
+  }
+}
+
+.titrePage, .titrePage a, h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-variant: normal;
+}
+
+
+ul.categoryActions {
+  float: right;
+  li {
+    display: inline-block;
+    margin-right: 3px;
+  }
+  select {
+    margin: 0; /*for the calendar view*/
+  }
+}
+
+/***************************/
+/* menubar and ImageInfoBar*/
+/***************************/
+@menubar_width: 250px;
+@infobar_width: 280px;
+
+#menubar {
+  float: left;
+  border-right: 1px solid border_color;
+  width: @menubar_width;
+  background: @menu_color;
+  h3 {
+    text-transform: none;
+  }
+  div {
+    margin: 1em;
+  }
+  ul {
+    padding-left: 1em;
+  }
+}
+
+#imageInfoBar {
+  @padding: 10px;
+  float: right;
+  padding: @padding;
+  width: @infobar_width - 2*@padding;
+  background: @menu_color;
+  h3 {
+    margin: 1em 0;
+  }
+  ul {
+    padding-left: 0
+  }
+}
+
+#toggle_info_bar, #menuswitcher {
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 2em;
+  background: @menu_color;
+  &:hover {
+    color: @text_color_hover;
+  }
+}
+
+#toggle_info_bar {
+  display: none; //will only be shown with js
+  float: right;
+  border-right: 0;
+}
+
+#menuswitcher {
+  display: none;
+  float: left;
+  margin-left: -1px;
+}
+
+#menuTagCloud li {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+
+#quicksearch {
+  fieldset{
+    padding: 0;
+  }
+  input{
+    background: url("../icon/search.png") no-repeat scroll 0.4em 0.4em transparent;
+    margin: 0;
+    outline: medium none;
+    padding: 0.4em 0 0.3em 2.5em;
+    color: @text_color;
+    width: @menubar_width - 70px;
+    border: 0;
+  }
+}
+
+#quickconnect {
+  label {
+    display: block;
+    clear: both;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%
+  }
+  input[type="checkbox"] {
+    vertical-align: middle;
+  }
+  .inline {
+    display: inline;
+  }
+}
+
+/*************************/
+/* categories thumbnails */
+/*************************/
+figure.category {
+  float: left;
+  width: 360px;
+  height: 12em;
+  padding: 10px;
+  margin: 0 40px 10px 0;
+  figcaption {
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+  }
+}
+
+.thumbnail {
+   .box-shadow(0, 1px, 3px);
+   margin           : 10px;
+}
+
+.picture_item {
+  float: left;
+  margin: 12px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.navigationBar {
+  color: lighten(@text_color, 25%);
+  a {
+    color: @text_color;
+  }
+  .pageNumberSelected {
+    color: @text_color;
+    font-weight: bold;
+  }
+}
+
+/***********/
+/* Picture */
+/***********/
+@color_pict_border: #FFFFFF; 
+
+.navButtons {
+  color: lighten(@text_color, 25%);
+  a {
+    color: @text_color;
+  }
+}
+
+#image_panel {
+  padding: 30px;
+  background-color: @background_color;
+  &.one_col {
+    margin-right: 0;
+  }
+  &.two_col {
+    margin-right: @infobar_width;
+  }
+}
+
+figure#image_wrapper {
+  .box-shadow(0, 1px, 8px);
+  background: @color_pict_border; /* Draw the picture's border */
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;         /* place the nav holder inside the picture */
+  margin: auto;               /* center the picture */
+  margin-bottom: 20px;
+  figcaption {
+      text-align: center;
+      padding: 1em;
+  }
+}
+
+#go_to_prev_holder, #go_to_next_holder{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+#go_to_prev_holder{
+    left: 0;
+}
+#go_to_next_holder{
+    right: 0;
+}
+
+#go_to_prev, #go_to_next{
+  display: none;
+  background: none repeat scroll 0 0 @color_pict_border;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  color: @text_color;
+  margin-top: -30px;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  padding-bottom: 2px;
+}
+
+#go_to_prev {
+    left: 0;
+    .border-radius(0, 10px, 10px, 0);
+}
+
+#go_to_next{
+    right: 0;
+    .border-radius(10px, 0, 0, 10px);
+}
+
+.navButtons {
+  font-weight: bold;
+  text-align: center;
+  .huge{
+    font-size: 4em;
+  }
+}
+
+#rateForm {
+  margin: 0;
+}
+#rateForm input, #rateForm input:active {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+#rateForm input.rateButtonStarFull  {
+  background:  url('../icon/rating-stars.png') no-repeat scroll -16px center;
+  width: 16px;
+}
+#rateForm input.rateButtonStarEmpty {
+  background:  url('../icon/rating-stars.png') no-repeat scroll 0 center;
+  width: 16px;
+}
+
+/************/
+/* Comments */
+/************/
+#comments{
+  ul.comment_list {
+    margin: 0;
+    padding: 0;
+  }
+  .comment {
+    margin: 15px 0;
+    background-color: lighten(@background_color, 3%);
+    .border-radius(10px, 10px, 10px, 0px);
+    padding: 1em;
+    position: relative;
+    .actions{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      a {
+        padding: 0.3em 0.8em;
+        margin-right: 5px;
+        background-color: darken(@background_color, 3%);
+        border: 1px solid darken(@background_color, 10%);
+      }
+    }
+    blockquote {
+      padding-top: 20px;
+    }
+  }
+  textarea {
+    width: 98%;
+  }
+}
+
+/**********/
+/* footer */
+/**********/
+footer {
+  padding: 1em;  
+  padding-top: 1.5em;
+  border-top: 1px solid @border_color;
+  clear: both;
+  background-color: @background_dark;
+}
+
+/********/
+/* tags */
+/********/
+
+.tagLevel5 { 
+  font-size: 130%; 
+}
+.tagLevel4 { 
+  font-size: 120%; 
+}
+.tagLevel3 { 
+  font-size: 110%; 
+}
+.tagLevel2 { 
+  font-size: 100%; 
+}
+.tagLevel1 { 
+  font-size: 90%; 
+}
+
+/**************************************/
+/* begin chronology/calendar elements */
+/**************************************/
+.calendarViews {
+  display: block;
+  margin: 2px 0 0;
+}
+
+.calItem, 
+.calItemEmpty {
+  font-weight: bold;
+  margin: 0 1px;
+  border: 1px solid @text_color;
+  padding: 0 0.2em;
+}
+
+.calItemEmpty {
+  opacity: 0.4;
+}
+
+.calItem A { 
+  border:0 
+}
+
+.calendarCalBar {
+  margin: 10px;
+  text-align: left;
+}
+.calendarBar {
+  padding: 5px 20px 25px 20px;  
+  font-weight: bold;
+}
+
+.calCalHead {
+  font-weight: bold;
+  font-size: 110%;
+  margin: 0 2px;
+}
+
+.calCal { 
+  margin: 0 2px; 
+}
+
+/******************************/
+/* nice looking month calendar*/
+/******************************/
+@cell_dim : 80px; 
+TABLE.calMonth {
+  border: 0;
+  border-collapse: collapse;
+  margin-bottom: 10px;    /*<-IE ignores this */
+  width: auto;
+  margin: 0 auto;
+  th, td {
+    padding: 1px;  
+    background: @background_color;
+  }
+  th {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  td {
+    height: @cell_dim;
+    width: @cell_dim;
+  }
+
+  /* nullify default blueprint background color */
+  tr:nth-child(2n) td, 
+  tr.even td {
+    background: @background_color;
+  }
+  tr:nth-child(2n) td.calDayCellEmpty, 
+  tr.even td.calDayCellEmpty {
+    background: @border_color;
+  }
+  tr:nth-child(2n) td.calDayCellFull, 
+  tr.even td.calDayCellFull {
+    background: @border_color;
+  }
+  TD.calDayCellFull, TD.calDayCellEmpty {
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid @text_color;
+  }
+
+  .calImg {
+    height: @cell_dim;
+    width: @cell_dim;
+    overflow: hidden;
+    vertical-align: bottom;
+    z-index: 1;
+    position: relative; /*<- this required by IE*/
+    img {
+      position: relative;
+      border: 0;
+    }
+  }
+
+  .calDayCellFull span {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px black; 
+    padding-left: 5px;
+    padding-top: 1px;
+    position: absolute;
+    vertical-align: top; 
+    z-index: 2;
+  }
+}
+
+/**********/
+/* search */
+/**********/
+.tagSelection li {
+  display: inline-block;
+  width: 150px;     
+  overflow: hidden;
+}
+
+.categoryList {
+  vertical-align: middle;
+}
+
+/**************/
+/* Login form */
+/**************/
+
+#login_form {
+  margin: 0 auto;
+  width: 512px;
+}
+
+#login_form label {
+  padding-right: 1em;
+}
+
+#login_form input[type="text"], 
+#login_form input[type="password"] {
+  width: 100%;
+}
+
+#login_form input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+/*********************/
+/* Registration form */
+/*********************/
+#register_form,
+#lostPassword {
+  label {
+    float: left;
+    margin: 0.5em 0;
+    width: 250px; 
+  }
+  input[type=text],
+  input[type=password] {
+    margin: 0.5em 0;
+    width: 200px;
+  }
+  li {
+    margin: 1em 0;
+  }
+}
