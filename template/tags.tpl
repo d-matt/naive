@@ -14,11 +14,28 @@
 <div id="content" class="two_col">
 {if isset($tags)}
   {if $display_mode == 'cloud'}
-  <div id="fullTagCloud">
-    {foreach from=$tags item=tag}
-		<span><a href="{$tag.URL}" class="tagLevel{$tag.level}" title="{$pwg->l10n_dec('%d photo', '%d photos', $tag.counter)}">{$tag.name}</a></span>
-    {/foreach}
-  </div>
+    {combine_script id='naive.jqcloud' path='themes/naive/js/jqcloud-0.2.4.min.js'}
+    {combine_css path="themes/naive/css/jqcloud.css" order=-10}
+    <script type="text/javascript">
+      var word_list = [
+        {foreach from=$tags item=tag}
+          {ldelim}
+            text: "{$tag.name}", 
+            weight: {$tag.counter}, 
+            url: "{$tag.URL}", 
+            title: "{$pwg->l10n_dec('%d photo', '%d photos', $tag.counter)}"
+          {rdelim},
+        {/foreach}
+      ];
+      {literal}
+      $(document).ready(function() {
+        // Call jQCloud on a jQuery object passing the word list as the first argument. 
+        // Chainability of methods is maintained.
+          $("#fullTagCloud").jQCloud(word_list);
+        });
+      {/literal}  
+    </script>
+  <div id="fullTagCloud" style="width: 850px; height: 350px; position: relative;"></div>
   {/if}
   {if $display_mode == 'letters'}
   <table>
