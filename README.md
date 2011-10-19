@@ -19,6 +19,7 @@ Links and credits
 Install
 -------
 There is at least two ways to place this theme in ``your-gallery/theme/`` dir.
+
 * download the archive from github (https://github.com/d-matt/naive/downloads) 
 
     wget -O naive.tar.gz https://github.com/d-matt/naive/tarball/master
