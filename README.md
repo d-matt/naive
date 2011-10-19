@@ -1,4 +1,4 @@
-ive theme for Piwigo
+Naive theme for Piwigo
 ============================
 
 Naive aims to be a clear and fluid theme for the piwigo image gallery.
@@ -11,15 +11,17 @@ Naive is hosted on [Github](http://github.com/d-matt/naive). Please feel free to
 Links and credits
 -----
 
-* [Piwigo](http://piwigo.org/)
-* [Simple grey] (http://fr.piwigo.org/ext/extension_view.php?eid=308)
-* [Blueprint CSS] (http://www.blueprintcss.org/)
-* [Less CSS] (http://lesscss.org/)
+* This theme is derived from the [Piwigo](http://piwigo.org/) default theme and the [Simple-grey](http://fr.piwigo.org/ext/extension_view.php?eid=308) theme,
+* [Blueprint CSS] (http://www.blueprintcss.org/),
+* [Less CSS] (http://lesscss.org/).
 
 
 Install
 -------
-download the archive and extract it in  ``your-gallery/theme/``. 
+* download the archive from github (https://github.com/d-matt/naive/downloads) and extract it in  ``your-gallery/theme/``. 
+    wget -O naive.tar.gz https://github.com/d-matt/naive/tarball/master
+* or clone the project 
+    git clone git://github.com/d-matt/naive.git
 
 This theme has been tested with piwigo 2.3 and firefox 7.
 
