@@ -18,9 +18,13 @@ Links and credits
 
 Install
 -------
-* download the archive from github (https://github.com/d-matt/naive/downloads) and extract it in  ``your-gallery/theme/``. 
+There is at least two ways to place this theme in ``your-gallery/theme/`` dir.
+* download the archive from github (https://github.com/d-matt/naive/downloads) 
+
     wget -O naive.tar.gz https://github.com/d-matt/naive/tarball/master
+
 * or clone the project 
+
     git clone git://github.com/d-matt/naive.git
 
 This theme has been tested with piwigo 2.3 and firefox 7.
