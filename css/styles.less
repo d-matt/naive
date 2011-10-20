@@ -41,6 +41,14 @@ fieldset {
   border: 1px solid @border_color;
 }
 
+table{
+  /* nullify default blueprint background color */
+  tr:nth-child(2n) td,
+  tr.even td {
+    background: darken(@background_color, 8%);
+  }
+}
+
 .rot(@angle) {
   -webkit-transform: rotate(@angle);
   -moz-transform: rotate(@angle);
@@ -274,7 +282,7 @@ figure.category {
 
 .thumbnail {
    .box-shadow(0, 1px, 3px);
-   margin           : 10px;
+   margin: 10px;
 }
 
 .picture_item {
@@ -447,20 +455,77 @@ footer {
 /* tags */
 /********/
 
-.tagLevel5 { 
-  font-size: 130%; 
+#menuTagCloud {
+  li {
+    display: inline-block;
+    padding-right: 0.5em;
+  }
+  //don't know why I need to repeat that ...
+  a {
+    &:hover,
+    &:focus {
+      color: @text_color_hover;
+    }
+  }
+  @c: @text_color;
+  .tagLevel5 {
+    font-size: 130%;
+    color: darken(@c, 20%);
+  }
+  .tagLevel4 {
+    font-size: 120%;
+    color: darken(@c, 10%);
+  }
+  .tagLevel3 {
+    font-size: 110%;
+    color: @c;
+  }
+  .tagLevel2 {
+    font-size: 100%;
+    color: lighten(@c, 10%);
+  }
+  .tagLevel1 {
+    font-size: 90%;
+    color: lighten(@c, 20%);
+  }
 }
-.tagLevel4 { 
-  font-size: 120%; 
-}
-.tagLevel3 { 
-  font-size: 110%; 
-}
-.tagLevel2 { 
-  font-size: 100%; 
-}
-.tagLevel1 { 
-  font-size: 90%; 
+
+#fullTagCloud {
+  margin: 1em auto;
+  position: relative;
+  width: 90%;
+  text-align: center;
+  span {
+    margin: 5px;
+  }
+  //don't know why I need to repeat that ...
+  a {
+    &:hover,
+    &:focus {
+      color: @text_color_hover;
+    } 
+  }
+  @c: @text_color;
+  .tagLevel5 { 
+    font-size: 250%; 
+    color: darken(@c, 20%);
+  }
+  .tagLevel4 { 
+    font-size: 200%; 
+    color: darken(@c, 10%);
+  }
+  .tagLevel3 { 
+    font-size: 150%; 
+    color: @c;
+  }
+  .tagLevel2 { 
+    font-size: 100%; 
+    color: lighten(@c, 10%);
+  }
+  .tagLevel1 { 
+    font-size: 80%; 
+    color: lighten(@c, 20%);
+  }
 }
 
 /**************************************/
@@ -537,18 +602,17 @@ TABLE.calMonth {
     background: @background_color;
   }
   tr:nth-child(2n) td.calDayCellEmpty, 
-  tr.even td.calDayCellEmpty {
-    background: @border_color;
-  }
-  tr:nth-child(2n) td.calDayCellFull, 
+  tr.even td.calDayCellEmpty,
+  tr:nth-child(2n) td.calDayCellFull,
   tr.even td.calDayCellFull {
-    background: @border_color;
+    background: darken(@background_color, 8%);
   }
+
   TD.calDayCellFull, TD.calDayCellEmpty {
     vertical-align: top;
     font-weight: bold;
     font-size: 18px;
-    border: 1px solid @text_color;
+    border: 1px solid @border_color;
   }
 
   .calImg {

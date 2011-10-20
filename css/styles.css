@@ -24,6 +24,13 @@ ul {
 fieldset {
   border: 1px solid #c2c2c2;
 }
+table {
+  /* nullify default blueprint background color */
+
+}
+table tr:nth-child(2n) td, table tr.even td {
+  background: #e1e1e1;
+}
 .rot-neg-90 {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -385,20 +392,64 @@ footer {
 /********/
 /* tags */
 /********/
-.tagLevel5 {
+#menuTagCloud li {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+#menuTagCloud a:hover, #menuTagCloud a:focus {
+  color: #ffaa00;
+}
+#menuTagCloud .tagLevel5 {
   font-size: 130%;
+  color: #5c5c5c;
 }
-.tagLevel4 {
+#menuTagCloud .tagLevel4 {
   font-size: 120%;
+  color: #767676;
 }
-.tagLevel3 {
+#menuTagCloud .tagLevel3 {
   font-size: 110%;
+  color: #8f8f8f;
 }
-.tagLevel2 {
+#menuTagCloud .tagLevel2 {
   font-size: 100%;
+  color: #a9a9a9;
 }
-.tagLevel1 {
+#menuTagCloud .tagLevel1 {
   font-size: 90%;
+  color: #c2c2c2;
+}
+#fullTagCloud {
+  margin: 1em auto;
+  position: relative;
+  width: 90%;
+  text-align: center;
+}
+#fullTagCloud span {
+  margin: 5px;
+}
+#fullTagCloud a:hover, #fullTagCloud a:focus {
+  color: #ffaa00;
+}
+#fullTagCloud .tagLevel5 {
+  font-size: 250%;
+  color: #5c5c5c;
+}
+#fullTagCloud .tagLevel4 {
+  font-size: 200%;
+  color: #767676;
+}
+#fullTagCloud .tagLevel3 {
+  font-size: 150%;
+  color: #8f8f8f;
+}
+#fullTagCloud .tagLevel2 {
+  font-size: 100%;
+  color: #a9a9a9;
+}
+#fullTagCloud .tagLevel1 {
+  font-size: 80%;
+  color: #c2c2c2;
 }
 /**************************************/
 /* begin chronology/calendar elements */
@@ -465,17 +516,17 @@ TABLE.calMonth td {
 TABLE.calMonth tr:nth-child(2n) td, TABLE.calMonth tr.even td {
   background: #f5f5f5;
 }
-TABLE.calMonth tr:nth-child(2n) td.calDayCellEmpty, TABLE.calMonth tr.even td.calDayCellEmpty {
-  background: #c2c2c2;
-}
-TABLE.calMonth tr:nth-child(2n) td.calDayCellFull, TABLE.calMonth tr.even td.calDayCellFull {
-  background: #c2c2c2;
+TABLE.calMonth tr:nth-child(2n) td.calDayCellEmpty,
+TABLE.calMonth tr.even td.calDayCellEmpty,
+TABLE.calMonth tr:nth-child(2n) td.calDayCellFull,
+TABLE.calMonth tr.even td.calDayCellFull {
+  background: #e1e1e1;
 }
 TABLE.calMonth TD.calDayCellFull, TABLE.calMonth TD.calDayCellEmpty {
   vertical-align: top;
   font-weight: bold;
   font-size: 18px;
-  border: 1px solid #8f8f8f;
+  border: 1px solid #c2c2c2;
 }
 TABLE.calMonth .calImg {
   height: 80px;
