@@ -299,6 +299,9 @@ figure#image_wrapper figcaption {
   text-align: center;
   padding: 1em;
 }
+figure#image_wrapper figcaption .imageNumber {
+  margin-top: -0.5em;
+}
 #go_to_prev_holder, #go_to_next_holder {
   cursor: pointer;
   position: absolute;
