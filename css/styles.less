@@ -57,7 +57,7 @@ table{
   transform: rotate(@angle);
 }
 
-.rot-neg-90 {
+.rot-90 {
   .rot(90deg);
 }
 
@@ -204,15 +204,22 @@ ul.categoryActions {
   }
 }
 
-#toggle_info_bar, #menuswitcher {
-  margin-top: 20px;
+.toggle_button {
   cursor: pointer;
-  padding: 5px;
   font-size: 2em;
+  padding: 5px;
+  margin: 0 10px;
   background: @menu_color;
+  font-weight: normal;
   &:hover {
     color: @text_color_hover;
   }
+}
+
+#toggle_info_bar, #menuswitcher {
+  margin-top: 20px;
+  padding: 5px;
+  .toggle_button;
 }
 
 #toggle_info_bar {
@@ -410,6 +417,9 @@ figure#image_wrapper {
 /* Comments */
 /************/
 #comments{
+  h3 {
+    margin-bottom: 1.5em;
+  }
   ul.comment_list {
     margin: 0;
     padding: 0;

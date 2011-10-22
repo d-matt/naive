@@ -84,7 +84,41 @@ jQuery(document).ready(function($){
     show_image_info();
   };
 
-  $("#theComments h3").click(function () {
-    $("#theComments > div").toggle("slow");
+  /* Comments
+     -------------
+     Comments are collapsible with a click on a
+     #toggle_comments button. Its visibility state is preserve during
+     the navigation with a cookie (borrowed to simple theme)
+  */
+  function show_comments(){
+    $("#toggle_comments .toggle_button").html("&raquo;");
+    $("#comments").show();
+  }
+  function hide_comments(){
+    $("#comments").hide();
+    $("#toggle_comments .toggle_button").html("&laquo;");
+  } 
+      
+  //Toggle comments visibility
+  $("#toggle_comments .toggle_button").removeClass("hidden").show();
+  $("#toggle_comments .toggle_button").click(function (){
+    if ( $("#comments").is(":hidden") ) {
+      show_comments();
+      $.cookie('comments', 'showing', {path: "/"});
+    }
+    else {
+      hide_comments();
+      $.cookie('comments', 'hiding', {path: "/"});
+    }
   });
+    
+  // creates a variable with the contents of the cookie comments
+  var comments = $.cookie('comments');
+  // if cookie says the comments are hiding, keep them hidden!
+  if ( comments == 'hiding' ) {
+    hide_comments();
+  }
+  if ( comments == 'showing' ) {
+    show_comments();
+  };
 });

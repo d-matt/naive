@@ -127,12 +127,14 @@
 <div id="image_panel" class="two_col">
   {$ELEMENT_CONTENT}
   {if isset($comments) OR isset($comment_add)}
-  <div id="comments">
-    <h3>{'Comments'|@translate}
+  <div id="toggle_comments" role="button">
+    <h3><span class="hidden rot-90 toggle_button">&laquo;</span>{'Comments'|@translate}
     {if $COMMENT_COUNT > 0}
       ({$COMMENT_COUNT})
     {/if}
     </h3>
+  </div>
+  <div id="comments">
     {if isset($comments)}
       {include file='comment_list.tpl'}
     {/if}
