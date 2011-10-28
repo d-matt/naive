@@ -37,8 +37,42 @@ ul {
   list-style: none;
 }
 
-fieldset {
-  border: 1px solid @border_color;
+form {
+  fieldset {
+    border: 1px solid @border_color;
+  }
+  label{
+    margin-right: 0.2em;
+    display: inline-block;
+    margin: 0.5em 0;
+    width: 200px;
+  }
+  ul {
+    padding-left: 0;
+  }
+  .inline_fields {
+    padding-left: 0; //to remove default blueprint style on ul
+    label {
+      width: auto;
+    }
+    li {
+      float: left;
+      margin-right: 1.5em;
+    }
+  }
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  select {
+    -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    .border-radius(3px, 3px, 3px, 3px);
+    .box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.1) inset);
+    margin: 0.5em 0;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    vertical-align: middle;
+  }
 }
 
 table{
@@ -106,6 +140,14 @@ table{
   -webkit-text-shadow: 0px 0px 2px lighten(@c, 20%);
 }
 
+.arrow_list {
+  li:before {
+    content: "\00BB \0020"; //see http://www.artishock.net/coding/css-list-styling-using-ascii-special-characters/
+    color: @color2;
+    font-weight: bold;
+  }
+}
+
 /**********/
 /* header */
 /**********/
@@ -129,7 +171,8 @@ header {
   background-color: @background_dark;
 }
 
-#content {
+#content,
+#content_id {
   padding: 10px 30px 10px 30px;
   background-color: @background_color;
   &.one_col {
@@ -245,12 +288,10 @@ ul.categoryActions {
   }
   input{
     background: url("../icon/search.png") no-repeat scroll 0.4em 0.4em transparent;
-    margin: 0;
-    outline: medium none;
     padding: 0.4em 0 0.3em 2.5em;
+    margin: 0.5em 0;
     color: @text_color;
-    width: @menubar_width - 70px;
-    border: 0;
+    width: @menubar_width - 60px;
   }
 }
 
@@ -258,6 +299,7 @@ ul.categoryActions {
   label {
     display: block;
     clear: both;
+    width: @menubar_width / 2;
   }
   input[type="text"],
   input[type="password"] {
@@ -657,52 +699,8 @@ TABLE.calMonth {
 /**********/
 .tagSelection li {
   display: inline-block;
-  width: 150px;     
-  overflow: hidden;
 }
 
 .categoryList {
   vertical-align: middle;
-}
-
-/**************/
-/* Login form */
-/**************/
-
-#login_form {
-  margin: 0 auto;
-  width: 512px;
-}
-
-#login_form label {
-  padding-right: 1em;
-}
-
-#login_form input[type="text"], 
-#login_form input[type="password"] {
-  width: 100%;
-}
-
-#login_form input[type="checkbox"] {
-  vertical-align: middle;
-}
-
-/*********************/
-/* Registration form */
-/*********************/
-#register_form,
-#lostPassword {
-  label {
-    float: left;
-    margin: 0.5em 0;
-    width: 250px; 
-  }
-  input[type=text],
-  input[type=password] {
-    margin: 0.5em 0;
-    width: 200px;
-  }
-  li {
-    margin: 1em 0;
-  }
 }

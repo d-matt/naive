@@ -1,7 +1,5 @@
 <form action="{$ROOT_URL}qsearch.php" method="get" id="quicksearch">
-  <fieldset>
-    <input type="text" name="q" id="q" placeholder="{'Quick search'|@translate}">
-  </fieldset>
+  <input type="text" name="q" id="q" placeholder="{'Quick search'|@translate}">
 </form>
 <h3>{'Menu'|@translate}</h3>
 <ul>

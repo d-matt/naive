@@ -7,35 +7,53 @@
   <form class="filter" action="{$F_ACTION}" method="get">
     <fieldset>
       <legend>{'Filter'|@translate}</legend>
-      <label>{'Keyword'|@translate}</label>
-      <input type="text" name="keyword" value="{$F_KEYWORD}">
-      <label>{'Author'|@translate}</label>
-      <input type="text" name="author" value="{$F_AUTHOR}">
-      <label>{'Album'|@translate}</label>
-      <select name="cat">
-        <option value="0">------------</option>
-        {html_options options=$categories selected=$categories_selected}
-      </select>
-      <label>{'Since'|@translate}</label>
-      <select name="since">
-        {html_options options=$since_options selected=$since_options_selected}
-      </select>
+      <ul class="inline_fields">
+        <li>
+          <label>{'Keyword'|@translate}</label>
+          <input type="text" name="keyword" value="{$F_KEYWORD}">
+        </li>
+        <li>
+          <label>{'Author'|@translate}</label>
+          <input type="text" name="author" value="{$F_AUTHOR}">
+        </li>
+        <li>
+          <label>{'Album'|@translate}</label>
+          <select name="cat">
+            <option value="0">------------</option>
+            {html_options options=$categories selected=$categories_selected}
+          </select>
+        </li>
+        <li>
+          <label>{'Since'|@translate}</label>
+          <select name="since">
+            {html_options options=$since_options selected=$since_options_selected}
+          </select>
+        </li>
+      </ul>
     </fieldset>
 
     <fieldset>
       <legend>{'Display'|@translate}</legend>
-      <label>{'Sort by'|@translate}</label>
-      <select name="sort_by">
-        {html_options options=$sort_by_options selected=$sort_by_options_selected}
-      </select>
-      <label>{'Sort order'|@translate}</label>
-      <select name="sort_order">
-        {html_options options=$sort_order_options selected=$sort_order_options_selected}
-      </select>
-      <label>{'Number of items'|@translate}</label>
-      <select name="items_number">
-        {html_options options=$item_number_options selected=$item_number_options_selected}
-      </select>
+      <ul class="inline_fields">
+        <li>
+          <label>{'Sort by'|@translate}</label>
+          <select name="sort_by">
+            {html_options options=$sort_by_options selected=$sort_by_options_selected}
+          </select>
+        </li>
+        <li>
+          <label>{'Sort order'|@translate}</label>
+          <select name="sort_order">
+            {html_options options=$sort_order_options selected=$sort_order_options_selected}
+          </select>
+        </li>
+        <li>
+          <label>{'Number of items'|@translate}</label>
+          <select name="items_number">
+            {html_options options=$item_number_options selected=$item_number_options_selected}
+          </select>
+        </li>
+      </ul>
     </fieldset>
 
     <p>

@@ -12,7 +12,7 @@
     <p>
       {'Please enter your username or email address.'|@translate} {'You will receive a link to create a new password via email.'|@translate}
     </p>
-    <p>
+    <p class="inline_fields">
       <label>{'Username or email'|@translate} : </label>
       <input type="text" id="username_or_email" name="username_or_email" {if isset($username_or_email)} value="{$username_or_email}"{/if}>
     </p>
