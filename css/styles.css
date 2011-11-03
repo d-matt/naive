@@ -59,6 +59,9 @@ form select {
 form input[type="checkbox"], form input[type="radio"] {
   vertical-align: middle;
 }
+form input[readonly] {
+  color: #cfcfcf;
+}
 table {
   /* nullify default blueprint background color */
 
