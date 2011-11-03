@@ -175,7 +175,6 @@ ul.categoryActions select {
 /***************************/
 #menubar {
   float: left;
-  border-right: 1px solid border_color;
   width: 250px;
   background: #f5f5f5;
 }
