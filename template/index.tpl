@@ -20,6 +20,7 @@
 {* --- *}
 
 <div id="content" class="two_col">
+  {if !empty($PLUGIN_INDEX_CONTENT_BEGIN)}{$PLUGIN_INDEX_CONTENT_BEGIN}{/if}
   {* ---> Calendar view ---*}
   {if isset($FILE_CHRONOLOGY_VIEW)}
     {include file=$FILE_CHRONOLOGY_VIEW}
@@ -33,4 +34,6 @@
   <div class="clear center">
     {if !empty($navbar)}{include file='navigation_bar.tpl'|@get_extent:'navbar'}{/if}
   </div>
+  {if !empty($PLUGIN_INDEX_CONTENT_END)}{$PLUGIN_INDEX_CONTENT_END}{/if}
 </div>
+{if !empty($PLUGIN_INDEX_CONTENT_AFTER)}{$PLUGIN_INDEX_CONTENT_AFTER}{/if}
