@@ -33,7 +33,9 @@
   {if isset($U_UP)          }<link rel="index" title="{'Thumbnails'|@translate}" href="{$U_UP}" >{/if}
   {if isset($U_PREFETCH)    }<link rel="prefetch" href="{$U_PREFETCH}">{/if}
 
-  {get_combined_css}
+{* get_combined_css HAS to be on first col, otherwise LocalFile Editor Plugin 
+   won't be able to place its rules ... (!!) *}
+{get_combined_css}
   {combine_css path="themes/naive/css/blueprint/screen.css" order=-10}
   {combine_css path="themes/naive/css/styles.css" order=-10}
   {foreach from=$themes item=theme}
