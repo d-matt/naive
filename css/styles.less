@@ -414,7 +414,7 @@ figure#image_wrapper {
     right: 0;
 }
 
-#go_to_prev, #go_to_next{
+.arrow{ 
   display: none;
   background: none repeat scroll 0 0 @color_pict_border;
   font-size: 4em;
@@ -429,13 +429,17 @@ figure#image_wrapper {
 }
 
 #go_to_prev {
+  &.arrow {
     left: 0;
     .border-radius(0, 10px, 10px, 0);
+  }
 }
 
 #go_to_next{
+  &.arrow {
     right: 0;
     .border-radius(10px, 0, 0, 10px);
+  }
 }
 
 .navButtons {

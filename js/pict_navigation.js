@@ -39,8 +39,8 @@ jQuery(document).ready(function($){
 
   $("#image_wrapper").css("width", $("#subject").css("width"));
  
-  $("#go_to_prev").addClass("arrow").appendTo("#go_to_prev_holder");
-  $("#go_to_next").addClass("arrow").appendTo("#go_to_next_holder");
+  $("#go_to_prev").clone().addClass("arrow").appendTo("#go_to_prev_holder");
+  $("#go_to_next").clone().addClass("arrow").appendTo("#go_to_next_holder");
 
   $("#go_to_prev_holder").mouseover(function () {
     $(".arrow", this).show();

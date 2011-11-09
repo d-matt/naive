@@ -359,7 +359,7 @@ figure#image_wrapper figcaption .imageNumber {
 #go_to_next_holder {
   right: 0;
 }
-#go_to_prev, #go_to_next {
+.arrow {
   display: none;
   background: none repeat scroll 0 0 #ffffff;
   font-size: 4em;
@@ -372,13 +372,13 @@ figure#image_wrapper figcaption .imageNumber {
   width: 40px;
   padding-bottom: 2px;
 }
-#go_to_prev {
+#go_to_prev.arrow {
   left: 0;
   border-radius: 0 10px 10px 0;
   -moz-border-radius: 0 10px 10px 0;
   -webkit-border-radius: 0 10px 10px 0;
 }
-#go_to_next {
+#go_to_next.arrow {
   right: 0;
   border-radius: 10px 0 0 10px;
   -moz-border-radius: 10px 0 0 10px;

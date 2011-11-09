@@ -34,10 +34,18 @@
   <span id="go_to_prev">
     <a id="prev_pict" href="{$previous.U_IMG}" title="{'Previous'|@translate} : {$previous.TITLE}" rel="prev">&lsaquo;</a>
   </span>
+  {else}
+  <span id="go_to_prev">
+    &lsaquo;
+  </span>
   {/if}
   {if isset($next)}
   <span id="go_to_next">
     <a id="next_pict" href="{$next.U_IMG}" title="{'Next'|@translate} : {$next.TITLE}" rel="next">&rsaquo;</a>
+  </span>
+  {else}
+  <span id="go_to_next">
+    &rsaquo;
   </span>
   {/if}
   {if isset($last)}
