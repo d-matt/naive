@@ -443,6 +443,19 @@ figure#image_wrapper figcaption .imageNumber {
 #comments textarea {
   width: 98%;
 }
+/*************/
+/* Slideshow */
+/*************/
+.slideshow_body {
+  background-color: black;
+  overflow: hidden;
+  text-align: center;
+}
+.slideshow_buttons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
 /**********/
 /* footer */
 /**********/

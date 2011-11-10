@@ -1,39 +1,19 @@
 jQuery(document).ready(function($){
-  //Set the image width and height to fill all the space while preserving ratio
-  var h = $(window).height();
-  var w = $(window).width();
-  var window_ratio = h / w;  
+  //Create a container div that will hold the image and the nav buttons
+  var slideshow = $("<div id='slideshow_wrapper'></div>");
+  slideshow.append($(".navButtons").addClass("slideshow_buttons"));
+  slideshow.append($("#subject"));
+  
+  //Change the body's  style (e.g. background set to black) 
+  $("body").addClass("slideshow_body");
 
-  var img_ratio = $("#image_wrapper img").height() / $("#image_wrapper img").width();
-  if ( (w * img_ratio) > h  ) {
-    var w = Math.floor( h / img_ratio );
-  }
-  else { 
-    var h = Math.floor( w * img_ratio );
-  }
-
-  var margin_top = Math.floor( ($(window).height() - h ) /2 )
-
-  //Create a container div that will hold the image
-  var div_container = $("<div id='fullscreen_image'></div>");
-  div_container.css({"text-align": "center", "background-color": "black"}); 
-  div_container.append($("#image_wrapper img").css({"width": w, "height": h, "margin-top": margin_top}));
-
-  //Create a container div that will hold the buttons
-  var div_buttons = $("<div id='buttons'></div>");
-  div_buttons.css({"position": "fixed", "top": "10px", "right": "10px"});
-  //move header to body in order to keep navigation buttons
-  div_buttons.append($(".navButtons"));
-
-  //Change background color to black
-  $("body").css({"background-color": "black", "overflow": "hidden"});
-
-  //Add the image container to the body
-  div_buttons.appendTo("body");
-  div_container.appendTo("body");
-
+  //Add the slideshow container to the body
+  slideshow.appendTo("body");
 
   //remove all the rest
   $("#the_page").remove();
+
+  //and finally, maximize the picture to fit the window
+  $('#subject').maximize();
 });
 
