@@ -12,10 +12,12 @@ jQuery(document).ready(function($){
     var h = Math.floor( w * img_ratio );
   }
 
+  var margin_top = Math.floor( ($(window).height() - h ) /2 )
+
   //Create a container div that will hold the image
   var div_container = $("<div id='fullscreen_image'></div>");
   div_container.css({"text-align": "center", "background-color": "black"}); 
-  div_container.append($("#image_wrapper img").css({"width": w, "height": h}));
+  div_container.append($("#image_wrapper img").css({"width": w, "height": h, "margin-top": margin_top}));
 
   //Create a container div that will hold the buttons
   var div_buttons = $("<div id='buttons'></div>");
@@ -24,7 +26,7 @@ jQuery(document).ready(function($){
   div_buttons.append($(".navButtons"));
 
   //Change background color to black
-  $("body").css("background-color", "black");
+  $("body").css({"background-color": "black", "overflow": "hidden"});
 
   //Add the image container to the body
   div_buttons.appendTo("body");
