@@ -26,7 +26,7 @@
     </ul>
     <p class="clear"> 
       <input type="hidden" name="redirect" value="{$smarty.server.REQUEST_URI|@urlencode}"/>
-      <input type="submit" name="login" value="{'Submit'|@translate}"/>
+      <input class="submit" type="submit" name="login" value="{'Submit'|@translate}"/>
     </p>
     <ul class="arrow_list right">
       {if isset($U_REGISTER)}

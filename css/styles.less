@@ -37,6 +37,20 @@ ul {
   list-style: none;
 }
 
+button,
+.button,
+.submit {
+  padding: 0.3em 0.8em;
+  margin-right: 5px;
+  background-color: darken(@background_color, 3%);
+  border: 1px solid darken(@background_color, 10%);
+  color: @text_color;
+  cursor: pointer;
+  &:hover{
+    color: @text_color_hover;
+  }
+}
+
 form {
   fieldset {
     border: 1px solid @border_color;
@@ -136,6 +150,13 @@ table{
   border-radius        : @arguments;
   -moz-border-radius   : @arguments;
   -webkit-border-radius: @arguments;
+}
+
+.gradient(@start: #000, @stop: #FFF) {
+  background: -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+  background: -webkit-linear-gradient(@start, @stop);
+  background: -moz-linear-gradient(center top, @start 0%, @stop 100%);
+  background: -moz-gradient(center top, @start 0%, @stop 100%);
 }
 
 .new {
@@ -489,10 +510,7 @@ figure#image_wrapper {
       top: 10px;
       right: 10px;
       a {
-        padding: 0.3em 0.8em;
-        margin-right: 5px;
-        background-color: darken(@background_color, 3%);
-        border: 1px solid darken(@background_color, 10%);
+        .button;
       }
     }
     blockquote {

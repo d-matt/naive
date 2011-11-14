@@ -149,7 +149,7 @@
       {/if}
         <textarea name="content" id="contentid">{$comment_add.CONTENT}</textarea>
         <input type="hidden" name="key" value="{$comment_add.KEY}">
-        <input type="submit" value="{'Submit'|@translate}">
+        <input class="submit" type="submit" value="{'Submit'|@translate}">
       </fieldset>
     </form>
     {/if}
