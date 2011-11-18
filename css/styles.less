@@ -37,6 +37,44 @@ ul {
   list-style: none;
 }
 
+@font-face {
+  font-family: 'naive';
+  src: url('../font/naive.eot'); /* IE9 Compatibility Modes */
+  src: url('../font/naive.eot?') format('eot'),  /* IE6-IE8 */
+  url('../font/naive.woff') format('woff'), /* Modern Browsers */
+  url('../font/naive.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../font/naive.svg#naive') format('svg'); /* Legacy iOS */
+}
+
+
+.icon {
+  &:before{
+    color:inherit;
+    font-family: "naive";
+    text-transform: none;
+    margin: 0 3px;
+  }
+  
+  &.search:before { content: 'f'; }
+  &.pen:before { content: 'b'; }
+  &.comment:before { content: 'c'; }
+  &.eye:before { content: 'e'; }
+  &.new:before { content: 'n'; }
+  &.play:before { content: 'p'; }
+  &.pause:before { content: 'q'; }
+  &.rss:before { content: 'r'; }
+  &.stop:before { content: 's'; }
+  &.check:before { content: 'v'; }
+  &.x:before { content: 'x'; }
+  &.plus:before { content: '+'; }
+  &.minus:before { content: '-'; }
+  &.next:before { content: '›'; }
+  &.prev:before { content: '‹'; }
+  &.first:before { content: '«'; }
+  &.last:before { content: '»'; }
+  &.star:before { content: '\22C6'; }
+}
+
 button,
 .button,
 .submit {
@@ -438,15 +476,14 @@ figure#image_wrapper {
 .arrow{ 
   display: none;
   background: none repeat scroll 0 0 @color_pict_border;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: bold;
   text-align: center;
   color: @text_color;
   margin-top: -30px;
   position: absolute;
   top: 50%;
-  width: 40px;
-  padding-bottom: 2px;
+  padding: 2px 8px;
 }
 
 #go_to_prev {
