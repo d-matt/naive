@@ -2,60 +2,34 @@
 <div class="navButtons">
   {if isset($slideshow)}
     {if isset($U_SLIDESHOW_STOP)}
-  <a id="start_stop_slideshow" href="{$U_SLIDESHOW_STOP}" title="{'stop the slideshow'|@translate}">{'Stop'|@translate}</a>
+  <a id="start_stop_slideshow"  class="button icon stop" href="{$U_SLIDESHOW_STOP}" title="{'stop the slideshow'|@translate}">
+    {'Stop'|@translate}
+  </a>
     {/if}
     {if isset($slideshow.U_START_PLAY)}
-  <a id="play_pause" href="{$slideshow.U_START_PLAY}" title="{'Play of slideshow'|@translate}">Play</a>
+  <a id="play_pause" class="button icon play" href="{$slideshow.U_START_PLAY}" title="{'Play of slideshow'|@translate}">
+    Play
+  </a>
     {/if}
     {if isset($slideshow.U_STOP_PLAY)}
-  <a id="play_pause" href="{$slideshow.U_STOP_PLAY}" title="{'Pause of slideshow'|@translate}">Pause</a>
+  <a id="play_pause" class="button icon pause" href="{$slideshow.U_STOP_PLAY}" title="{'Pause of slideshow'|@translate}">
+    Pause
+  </a>
     {/if}
-    {if isset($slideshow.U_DEC_PERIOD)}
-  <a id="increase_freq" href="{$slideshow.U_DEC_PERIOD}" title="{'Accelerate diaporama speed'|@translate}">&nbsp;+&nbsp;</a>
-    {else}
-  &nbsp;+&nbsp;
-    {/if}
-    {if isset($slideshow.U_INC_PERIOD)}
-  <a id="decrease_freq" href="{$slideshow.U_INC_PERIOD}" title="{'Reduce diaporama speed'|@translate}">&nbsp;-&nbsp;</a>
-    {else}
-  &nbsp;-&nbsp;
-    {/if}
+  <a id="increase_freq" class="button icon plus" {if isset($slideshow.U_DEC_PERIOD)}href="{$slideshow.U_DEC_PERIOD}" title="{'Accelerate diaporama speed'|@translate}"{/if}></a>
+  <a id="decrease_freq" class="button icon minus" {if isset($slideshow.U_INC_PERIOD)}href="{$slideshow.U_INC_PERIOD}" title="{'Reduce diaporama speed'|@translate}"{/if}></a>
   {/if}
-  {if isset($first)}
   <span id="first_button">
-    <a id="first_pict" href="{$first.U_IMG}" title="{'First'|@translate} : {$first.TITLE}" rel="start">&laquo;</a>
+    <a id="first_pict" class="button icon first" {if isset($first)}href="{$first.U_IMG}" title="{'First'|@translate} : {$first.TITLE}" rel="start"{/if}></a>
   </span>
-  {else}
-  <span id="first_button">
-    &laquo;
-  </span>
-  {/if}
-  {if isset($previous)}
   <span id="go_to_prev">
-    <a id="prev_pict" href="{$previous.U_IMG}" title="{'Previous'|@translate} : {$previous.TITLE}" rel="prev">&lsaquo;</a>
+    <a id="prev_pict" class="button icon prev" {if isset($previous)}href="{$previous.U_IMG}" title="{'Previous'|@translate} : {$previous.TITLE}" rel="prev"{/if}></a>
   </span>
-  {else}
-  <span id="go_to_prev">
-    &lsaquo;
-  </span>
-  {/if}
-  {if isset($next)}
   <span id="go_to_next">
-    <a id="next_pict" href="{$next.U_IMG}" title="{'Next'|@translate} : {$next.TITLE}" rel="next">&rsaquo;</a>
+    <a id="next_pict" class="button icon next" {if isset($next)}href="{$next.U_IMG}" title="{'Next'|@translate} : {$next.TITLE}" rel="next"{/if}></a>
   </span>
-  {else}
-  <span id="go_to_next">
-    &rsaquo;
-  </span>
-  {/if}
-  {if isset($last)}
   <span id="last_button">
-    <a id="last_pict" href="{$last.U_IMG}" title="{'Last'|@translate} : {$last.TITLE}" rel="last">&raquo;</a>
+    <a id="last_pict" class="button icon last" {if isset($last)}href="{$last.U_IMG}" title="{'Last'|@translate} : {$last.TITLE}" rel="last"{/if}></a>
   </span>
-  {else}
-  <span id="last_button">
-    &raquo;
-  </span>
-  {/if}
 </div>
 {/if}

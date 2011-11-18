@@ -42,6 +42,8 @@ jQuery(document).ready(function($){
   $("#go_to_prev").clone().addClass("arrow").appendTo("#go_to_prev_holder");
   $("#go_to_next").clone().addClass("arrow").appendTo("#go_to_next_holder");
 
+  $(".arrow a").removeClass("button");
+
   $("#go_to_prev_holder").mouseover(function () {
     $(".arrow", this).show();
   }).mouseout(function () {
