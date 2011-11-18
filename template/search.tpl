@@ -96,8 +96,8 @@
       <label>{'Search in sub-albums'|@translate}</label>
       <input type="checkbox" name="subcats-included" value="1" checked="checked">
     </fieldset>
-    <input class="submit" type="submit" name="submit" value="{'Submit'|@translate}">
-    <input class="submit" type="reset" value="{'Reset'|@translate}">
+    <button type="submit" name="submit"><span class="icon check">{'Submit'|@translate}</span></button>
+    <button type="reset"><span class="icon x">{'Reset'|@translate}</span></button>
   </form>
   <div class="clear"></div>
   <script type="text/javascript"><!--

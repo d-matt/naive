@@ -57,7 +57,7 @@
     </fieldset>
 
     <p>
-      <input class="submit" type="submit" value="{'Filter and display'|@translate}">
+      <button class="submit icon search" type="submit">{'Filter and display'|@translate}</button>
     </p>
   </form>
 

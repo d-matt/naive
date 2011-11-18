@@ -41,8 +41,8 @@
     </fieldset>
     <p class="bottomButtons">
       <input type="hidden" name="key" value="{$F_KEY}" >
-      <input class="submit" type="submit" name="submit" value="{'Register'|@translate}">
-      <input class="submit" type="reset" value="{'Reset'|@translate}">
+      <button class="submit icon check" type="submit" name="submit">{'Register'|@translate}</button>
+      <button class="submit icon x" type="reset">{'Reset'|@translate}</button>
     </p>
   </form>
   <script type="text/javascript"><!--

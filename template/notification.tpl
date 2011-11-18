@@ -10,9 +10,9 @@
 
   <p>{'The RSS notification feed provides notification on news from this website : new photos, updated albums, new comments. Use a RSS feed reader.'|@translate}</p>
 
-  <ul class="arrow_list">
-    <li><a href="{$U_FEED_IMAGE_ONLY}">{'Photos only RSS feed'|@translate}</a></li>
-    <li><a href="{$U_FEED}">{'Complete RSS feed (photos, comments)'|@translate}</a></li>
+  <ul>
+    <li><a href="{$U_FEED_IMAGE_ONLY}" class="icon rss">{'Photos only RSS feed'|@translate}</a></li>
+    <li><a href="{$U_FEED}" class="icon rss">{'Complete RSS feed (photos, comments)'|@translate}</a></li>
   </ul>
   <div class="clear"></div>
 </div>

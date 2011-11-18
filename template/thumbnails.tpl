@@ -6,13 +6,18 @@
     </a>
     {if $SHOW_THUMBNAIL_CAPTION }
       <figcaption>
-        {if !empty($thumbnail.icon_ts)}<span class="new small">&#9733;</span>{/if}
+        {if !empty($thumbnail.icon_ts)}<span class="icon new"></span>{/if}
         {$thumbnail.NAME}
+        <br>
         {if isset($thumbnail.NB_COMMENTS)}
-        <span class="small"><br>{$pwg->l10n_dec('%d comment', '%d comments',$thumbnail.NB_COMMENTS)}</span>
+        <span class="small icon comment" title="{$pwg->l10n_dec('%d comment', '%d comments',$thumbnail.NB_COMMENTS)}">
+          {$thumbnail.NB_COMMENTS}
+        </span>
         {/if}
         {if isset($thumbnail.NB_HITS)}
-        <span class="small"><br>{$pwg->l10n_dec('%d hit', '%d hits',$thumbnail.NB_HITS)}</span>
+	<span class="small icon eye" title="{$pwg->l10n_dec('%d hit', '%d hits',$thumbnail.NB_HITS)}">
+          {$thumbnail.NB_HITS}
+        </span>
         {/if}
       </figcaption>
     {/if}

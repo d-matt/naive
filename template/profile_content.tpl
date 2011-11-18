@@ -75,10 +75,10 @@
 
   <p class="bottomButtons">
     <input type="hidden" name="pwg_token" value="{$PWG_TOKEN}">
-    <input class="submit" type="submit" name="validate" value="{'Submit'|@translate}">
-    <input class="submit" type="reset" name="reset" value="{'Reset'|@translate}">
+    <button class="submit icon check" type="submit" name="validate">{'Submit'|@translate}</button>
+    <button class="submit icon x" type="reset" name="reset">{'Reset'|@translate}</button>
     {if $ALLOW_USER_CUSTOMIZATION}
-    <input class="submit" type="submit" name="reset_to_default" value="{'Reset to default values'|@translate}">
+    <button class="submit" type="submit" name="reset_to_default">{'Reset to default values'|@translate}</button>
     {/if}
   </p>
 

@@ -23,7 +23,7 @@
     <span class="{if $cat.nb_images > 0}menuInfoCat{else}menuInfoCatByChild{/if}" title="{$cat.TITLE}">[{$cat.count_images}]</span>
     {/if}
     {if !empty($cat.icon_ts)}
-    <span class="new small">&#9733;</span>
+    <span class="icon new"></span>
     {/if}
   {assign var='ref_level' value=$cat.LEVEL}
 {/foreach}

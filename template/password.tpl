@@ -16,7 +16,7 @@
       <label>{'Username or email'|@translate} : </label>
       <input type="text" id="username_or_email" name="username_or_email" {if isset($username_or_email)} value="{$username_or_email}"{/if}>
     </p>
-    <input class="submit" type="submit" name="submit" value="{'Change my password'|@translate}">
+    <button class="submit icon check" type="submit" name="submit">{'Change my password'|@translate}</button>
     {elseif $action eq 'reset'}
     <p>{'Hello'|@translate} <em>{$username}</em>. {'Enter your new password below.'|@translate}</p>
     <p>
@@ -27,7 +27,7 @@
       <label>{'Confirm Password'|@translate}</label>
       <input type="password" name="passwordConf" id="passwordConf" value="">
     </p>
-    <input class="submit" type="submit" name="submit" value="{'Submit'|@translate}">
+    <button class="submit icon check" type="submit" name="submit">{'Submit'|@translate}</button>
     {/if}
   </form>
 {/if} {* $action ne 'none' *}

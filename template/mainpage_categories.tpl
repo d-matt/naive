@@ -7,7 +7,7 @@
     <h3>
       <a href="{$cat.URL}">{$cat.NAME}</a>
       {if !empty($cat.icon_ts)}
-      <span class="new">&#9733;</span>
+      <span class="icon new"></span>
       {/if}
     </h3>
     {if isset($cat.INFO_DATES) }
