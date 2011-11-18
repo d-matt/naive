@@ -21,6 +21,75 @@ h1, h2, h3 {
 ul {
   list-style: none;
 }
+@font-face {
+  font-family: 'naive';
+  src: url('../font/naive.eot');
+  src: url('../font/naive.eot?') format('eot'), /* IE6-IE8 */
+   url('../font/naive.woff') format('woff'), /* Modern Browsers */
+   url('../font/naive.ttf') format('truetype'), /* Safari, Android, iOS */
+   url('../font/naive.svg#naive') format('svg');/* IE9 Compatibility Modes */
+  /* Legacy iOS */
+}
+.icon:before {
+  color: inherit;
+  font-family: "naive";
+  text-transform: none;
+  margin: 0 3px;
+}
+.icon.search:before {
+  content: 'f';
+}
+.icon.pen:before {
+  content: 'b';
+}
+.icon.comment:before {
+  content: 'c';
+}
+.icon.eye:before {
+  content: 'e';
+}
+.icon.new:before {
+  content: 'n';
+}
+.icon.play:before {
+  content: 'p';
+}
+.icon.pause:before {
+  content: 'q';
+}
+.icon.rss:before {
+  content: 'r';
+}
+.icon.stop:before {
+  content: 's';
+}
+.icon.check:before {
+  content: 'v';
+}
+.icon.x:before {
+  content: 'x';
+}
+.icon.plus:before {
+  content: '+';
+}
+.icon.minus:before {
+  content: '-';
+}
+.icon.next:before {
+  content: 'â€º';
+}
+.icon.prev:before {
+  content: 'â€¹';
+}
+.icon.first:before {
+  content: 'Â«';
+}
+.icon.last:before {
+  content: 'Â»';
+}
+.icon.star:before {
+  content: '\22C6';
+}
 button, .button, .submit {
   padding: 0.3em 0.8em;
   margin-right: 5px;
@@ -373,15 +442,14 @@ figure#image_wrapper figcaption .imageNumber {
 .arrow {
   display: none;
   background: none repeat scroll 0 0 #ffffff;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: bold;
   text-align: center;
   color: #8f8f8f;
   margin-top: -30px;
   position: absolute;
   top: 50%;
-  width: 40px;
-  padding-bottom: 2px;
+  padding: 2px 8px;
 }
 #go_to_prev.arrow {
   left: 0;
