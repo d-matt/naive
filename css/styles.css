@@ -76,16 +76,16 @@ ul {
   content: '-';
 }
 .icon.next:before {
-  content: 'â€º';
+  content: '\203A';
 }
 .icon.prev:before {
-  content: 'â€¹';
+  content: '\2039';
 }
 .icon.first:before {
-  content: 'Â«';
+  content: '\00AB';
 }
 .icon.last:before {
-  content: 'Â»';
+  content: '\00BB';
 }
 .icon.star:before {
   content: '\22C6';
