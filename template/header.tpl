@@ -57,7 +57,7 @@
   <![endif]-->
   {combine_script id='jquery' path='themes/default/js/jquery.min.js'}
   {combine_script id='core.scripts' path='themes/default/js/scripts.js'}
-  {combine_script id='jquery.cookie' path='themes/naive/js/jquery.cookie.min.js'}
+  {combine_script id='jquery.cookie' path='themes/naive/js/jquery.cookie.js'}
   {combine_script id='naive.scripts' path='themes/naive/js/scripts.js'}
   {combine_script id='naive.patches' path='themes/naive/js/patches.js'}
 
