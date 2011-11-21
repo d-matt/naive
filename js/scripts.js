@@ -114,8 +114,11 @@ jQuery(document).ready(function($){
     
   // creates a variable with the contents of the cookie comments
   var comments = $.cookie('comments');
-  // if cookie says the comments are hiding, keep them hidden!
-  if ( comments == 'hiding' ) {
+  // if cookie says the comments are hiding, keep them hidden! unless you're 
+  // trying to display the comments page ...
+  if ( comments == 'hiding' && 
+       ! (/comments.php/.test( $(location).attr('href') ) ) 
+     ) {
     hide_comments();
   }
   if ( comments == 'showing' ) {
