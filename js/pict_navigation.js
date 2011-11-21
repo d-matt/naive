@@ -7,6 +7,11 @@ jQuery(document).ready(function($){
     }
   }
   $(document).keydown(function(e) {
+      // Don't fire in text-accepting inputs. -> This way comments can contain 
+      // the the shortcut's keys.
+      if ( (/textarea/i.test( e.target.nodeName ) )) {
+        return;
+      }
       // note : with keypress function, arrow keys won't work with chrome
       // see http://bugs.jquery.com/ticket/7300
       switch(e.keyCode) {
