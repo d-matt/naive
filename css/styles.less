@@ -314,7 +314,9 @@ ul.categoryActions {
   float: right;
   padding: @padding;
   width: @infobar_width - 2*@padding;
-  background: @menu_color;
+  background: transparent;
+  position: relative;
+  z-index: 2; // will go over the picture if window is too small
   h3 {
     margin: 1em 0;
   }
@@ -455,12 +457,14 @@ figure.category {
 
 figure#image_wrapper {
   .box-shadow(0, 1px, 8px);
-  background: @color_pict_border; /* Draw the picture's border */
+  background: @color_pict_border; // Draw the picture's border
   padding: 10px;
   margin-bottom: 20px;
-  position: relative;         /* place the nav holder inside the picture */
-  margin: auto;               /* center the picture */
+  position: relative;         // place the nav holder inside the picture
+  margin: auto;               // center the picture
   margin-bottom: 20px;
+  overflow: auto;             // to prevent breaking when overlapping with aside
+  z-index: 1;                 // will go under the aside if window is too small
   figcaption {
       text-align: center;
       padding: 1em;

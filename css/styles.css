@@ -274,7 +274,9 @@ ul.categoryActions select {
   float: right;
   padding: 10px;
   width: 260px;
-  background: #f5f5f5;
+  background: transparent;
+  position: relative;
+  z-index: 2;
 }
 #imageInfoBar h3 {
   margin: 1em 0;
@@ -407,17 +409,13 @@ figure#image_wrapper {
   -moz-box-shadow: 0 1px 8px #8f8f8f;
   -webkit-box-shadow: 0 1px 8px #8f8f8f;
   background: #ffffff;
-  /* Draw the picture's border */
-
   padding: 10px;
   margin-bottom: 20px;
   position: relative;
-  /* place the nav holder inside the picture */
-
   margin: auto;
-  /* center the picture */
-
   margin-bottom: 20px;
+  overflow: auto;
+  z-index: 1;
 }
 figure#image_wrapper figcaption {
   text-align: center;
@@ -611,6 +609,20 @@ footer {
 #fullTagCloud .tagLevel1 {
   font-size: 80%;
   color: #c2c2c2;
+}
+#tags_by_letter {
+  column-count: auto;
+  -moz-column-count: auto;
+  -webkit-column-count: auto;
+  column-width: 250px;
+  -moz-column-width: 250px;
+  -webkit-column-width: 250px;
+  column-gap: 2em;
+  -moz-column-gap: 2em;
+  -webkit-column-gap: 2em;
+}
+#tags_by_letter .nbEntries {
+  text-align: right;
 }
 /**************************************/
 /* begin chronology/calendar elements */
