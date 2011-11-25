@@ -197,6 +197,18 @@ table{
   background: -moz-gradient(center top, @start 0%, @stop 100%);
 }
 
+.multicolumn (@count: 2, @gap: 1em, @width: 200px) {
+  column-count: @count;
+  -moz-column-count: @count;
+  -webkit-column-count: @count;
+  column-width: @width;
+  -moz-column-width: @width;
+  -webkit-column-width: @width;
+  column-gap: @gap;
+  -moz-column-gap: @gap;
+  -webkit-column-gap: @gap;
+}
+
 .new {
   @c: @color2;
   color: @c;//#D7DF01;
@@ -658,6 +670,13 @@ footer {
   .tagLevel1 { 
     font-size: 80%; 
     color: lighten(@c, 20%);
+  }
+}
+
+#tags_by_letter{
+  .multicolumn(auto, 2em, 250px);  
+  .nbEntries {
+    text-align: right;
   }
 }
 

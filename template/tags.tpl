@@ -21,29 +21,21 @@
   </div>
   {/if}
   {if $display_mode == 'letters'}
-  <table>
-    <tr>
-      <td valign="top">
-      {foreach from=$letters item=letter}
-      <fieldset class="tagLetter">
-        <legend class="tagLetterLegend">{$letter.TITLE}</legend>
-        <table class="tagLetterContent">
-          {foreach from=$letter.tags item=tag}
-          <tr class="tagLine">
-            <td><a href="{$tag.URL}">{$tag.name}</a></td>
-        <td class="nbEntries">{$pwg->l10n_dec('%d photo', '%d photos', $tag.counter)}</td>
-          </tr>
-          {/foreach}
-        </table>
-      </fieldset>
-      {if isset($letter.CHANGE_COLUMN) }
-      </td>
-      <td valign="top">
-      {/if}
-      {/foreach}
-      </td>
-    </tr>
-  </table>
+  <div id="tags_by_letter">
+    {foreach from=$letters item=letter}
+    <fieldset class="tagLetter">
+      <legend>{$letter.TITLE}</legend>
+      <table>
+        {foreach from=$letter.tags item=tag}
+        <tr>
+          <td><a href="{$tag.URL}">{$tag.name}</a></td>
+          <td class="nbEntries">{$pwg->l10n_dec('%d photo', '%d photos', $tag.counter)}</td>
+        </tr>
+        {/foreach}
+      </table>
+    </fieldset>
+    {/foreach}
+  </div>
   {/if}
 {/if}
   <div class="clear"></div>
