@@ -2,6 +2,7 @@ References
 ==========
 
 * original idea and icons : http://somerandomdude.com/work/iconic/
+* Additional icon from : http://raphaeljs.com/icons/ and http://www.alexpeattie.com/projects/justvector_icons/
 * inkscape tutorial : http://cleversomeday.wordpress.com/2010/02/09/inkscape-dings/
 
 Generate the fonts

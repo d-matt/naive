@@ -11,6 +11,7 @@ dingbats = {
     u"c" : "comment_stroke.svg",
     u"e" : "eye.svg",
     u"f" : "magnifying_glass_alt.svg",
+    u"g" : "github.svg",
     u"n" : "bolt.svg",
     u"p" : "play.svg",
     u"q" : "pause.svg",
