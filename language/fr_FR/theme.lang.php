@@ -7,6 +7,6 @@ $lang['ie_error'] = 'Il semble que vous utilisez Internet Explorer 8 ou inférie
     Pour cela <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">cliquez ici</a>.';
 
 $lang['js_missing'] = 'Il semble que le JavaScript soit désactivé dans votre 
-    navigateur. Par conséquent vous ne pourrez pas naviguer de façon optimale 
+    navigateur. Par conséquent, vous ne pourrez pas naviguer de façon optimale 
     sur ce site et il est conseillé d\'activer ce paramètre dans vos préférences.';
 ?>
