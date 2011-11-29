@@ -118,7 +118,7 @@
          and $SECTION_TITLE on picture pages ... *}
       <h2>{$TITLE}{$SECTION_TITLE}{if isset($chronology.TITLE)} / {$chronology.TITLE}{/if}</h2>
     </header>
-    {if isset($errors)}
+    {if isset($errors) and count($errors) > 0}
     <div class="error">
       <ul>
         {foreach from=$errors item=error}
@@ -127,7 +127,7 @@
       </ul>
     </div>
     {/if}
-    {if isset($infos)}
+    {if isset($infos) and count($infos) > 0}
     <div class="notice">
       <ul>
         {foreach from=$infos item=info}
