@@ -68,6 +68,16 @@
   {/if}
 </head>
 <body>
+<!--[if lte IE 8]>
+  <div id="ie-message" class="error">
+    {'ie_error'|@translate}
+  </div>
+<![endif]-->
+  <noscript>
+    <p class="error">
+      {'js_missing'|@translate}
+    </p>
+  </noscript>
   <div id="the_page">
 {if !empty($PLUGIN_INDEX_CONTENT_BEFORE)}{$PLUGIN_INDEX_CONTENT_BEFORE}{/if}
     <header>
