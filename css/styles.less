@@ -362,15 +362,21 @@ ul.categoryActions {
 }
 
 #quicksearch {
+  border: 1px solid @border_color;
+  .border-radius(3px, 3px, 3px, 3px);
+  .box-shadow(0, 1px, 3px, rgba(0, 0, 0, 0.1) inset);
+  margin-bottom: 1em;
+  padding-left: 0.3em;
   fieldset{
     padding: 0;
   }
   input{
-    background: url("../icon/search.png") no-repeat scroll 0.4em 0.4em transparent;
-    padding: 0.4em 0 0.3em 2.5em;
-    margin: 0.5em 0;
+    background: transparent;
     color: @text_color;
     width: @menubar_width - 60px;
+    border: none;
+    .box-shadow(0,0,0);
+    .border-radius(0,0,0,0);
   }
 }
 

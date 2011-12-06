@@ -1,4 +1,5 @@
 <form action="{$ROOT_URL}qsearch.php" method="get" id="quicksearch">
+  <span class="icon search"></span>
   <input type="text" name="q" id="q" placeholder="{'Quick search'|@translate}">
 </form>
 <h3>{'Menu'|@translate}</h3>
