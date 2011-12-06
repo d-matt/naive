@@ -47,6 +47,14 @@ See <http://www.gnu.org/licenses/gpl.html>.
 Changelog
 ---------
 
+### version 0.1 (06/12/2011)
+
+- Slideshow in full screen
+- Dingbat font for icons
+- forms and buttons style
+- tags by letter style
+- inform internet explorer users that they should change for a modern browser
+
 ### version 0.0.1 (18/10/2011)
 
 - Initial release
