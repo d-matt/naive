@@ -407,12 +407,6 @@ figure.category figcaption {
 /***********/
 /* Picture */
 /***********/
-.navButtons {
-  color: #cfcfcf;
-}
-.navButtons a {
-  color: #8f8f8f;
-}
 #image_panel {
   padding: 30px;
   background-color: #f5f5f5;
@@ -483,6 +477,11 @@ figure#image_wrapper figcaption .imageNumber {
 .navButtons {
   font-weight: bold;
   text-align: center;
+  margin: 10px;
+  color: #cfcfcf;
+}
+.navButtons a {
+  color: #8f8f8f;
 }
 .navButtons .huge {
   font-size: 4em;

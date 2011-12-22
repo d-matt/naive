@@ -444,13 +444,6 @@ figure.category {
 /***********/
 @color_pict_border: #FFFFFF; 
 
-.navButtons {
-  color: lighten(@text_color, 25%);
-  a {
-    color: @text_color;
-  }
-}
-
 #image_panel {
   padding: 30px;
   background-color: @background_color;
@@ -526,6 +519,11 @@ figure#image_wrapper {
 .navButtons {
   font-weight: bold;
   text-align: center;
+  margin: 10px;
+  color: lighten(@text_color, 25%);
+  a {
+    color: @text_color;
+  }
   .huge{
     font-size: 4em;
   }
