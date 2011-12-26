@@ -25,7 +25,12 @@
       {/if}
     </ul>
     <p class="clear"> 
-      <input type="hidden" name="redirect" value="{$smarty.server.REQUEST_URI|@urlencode}"/>
+      <input type="hidden" name="redirect" 
+        {if isset($U_REDIRECT)} 
+          value="{$U_REDIRECT|@urlencode}"
+        {else}
+          value="{$smarty.server.REQUEST_URI|@urlencode}"
+        {/if}>
       <button class="submit icon check" type="submit" name="login">{'Submit'|@translate}</button>
     </p>
     <ul class="arrow_list right">
