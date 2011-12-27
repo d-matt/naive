@@ -15,10 +15,10 @@
       var img_ratio = img.height() / img.width();
 
       if ( (w * img_ratio) > h  ) {
-        var w =  Math.floor( h / img_ratio );
+        w =  Math.floor( h / img_ratio );
       }
       else {
-        var h = Math.floor( w * img_ratio );
+        h = Math.floor( w * img_ratio );
       }
 
       var margin_top =  Math.floor( ($(window).height() - h ) /2 ); 
@@ -35,4 +35,4 @@
     }); 
   return this;
   };
-})(jQuery)
+})(jQuery);

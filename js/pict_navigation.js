@@ -40,7 +40,9 @@ jQuery(document).ready(function($){
   });
 
   //Rearrange navigation buttons
-  if ($("#image_wrapper").length)  $("#imageInfoBar .navButtons").hide();
+  if ($("#image_wrapper").length) {
+    $("#imageInfoBar .navButtons").hide();
+  }
 
   $("#image_wrapper").css("width", $("#subject").css("width"));
  

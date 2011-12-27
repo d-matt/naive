@@ -37,12 +37,12 @@ jQuery(document).ready(function($){
   // creates a variable with the contents of the cookie side-menu
   var sidemenu = $.cookie('side-menu');
   // if cookie says the menu is hiding, keep it hidden!
-  if ( sidemenu == 'hiding' ) {
+  if ( sidemenu === 'hiding' ) {
     hide_side_menu();
   }
-  if ( sidemenu == 'showing' ) {
+  if ( sidemenu === 'showing' ) {
     show_side_menu();
-  };
+  }
 
   /* Image Infobar
      -------------
@@ -77,12 +77,12 @@ jQuery(document).ready(function($){
   // creates a variable with the contents of the cookie side-menu
   var image_info = $.cookie('image-info');
   // if cookie says the menu is hiding, keep it hidden!
-  if ( image_info == 'hiding' ) {
+  if ( image_info === 'hiding' ) {
     hide_image_info();    
   }
-  if ( image_info == 'showing' ) {
+  if ( image_info === 'showing' ) {
     show_image_info();
-  };
+  }
 
   /* Comments
      -------------
@@ -116,12 +116,12 @@ jQuery(document).ready(function($){
   var comments = $.cookie('comments');
   // if cookie says the comments are hiding, keep them hidden! unless you're 
   // trying to display the comments page ...
-  if ( comments == 'hiding' && 
+  if ( comments === 'hiding' && 
        ! (/comments.php/.test( $(location).attr('href') ) ) 
      ) {
     hide_comments();
   }
-  if ( comments == 'showing' ) {
+  if ( comments === 'showing' ) {
     show_comments();
-  };
+  }
 });
