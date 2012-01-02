@@ -47,6 +47,10 @@ See <http://www.gnu.org/licenses/gpl.html>.
 Changelog
 ---------
 
+### version 0.3 (02/01/2012)
+
+- Display thumbnails in a ul#thumbnails block to ensure plugins compatibility
+
 ### version 0.2 (02/01/2012)
 
 - Only mask nav buttons while displaying pictures (for plugins compatibility)
