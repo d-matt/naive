@@ -47,6 +47,11 @@ See <http://www.gnu.org/licenses/gpl.html>.
 Changelog
 ---------
 
+### version 0.2 (02/01/2012)
+
+- Only mask nav buttons while displaying pictures (for plugins compatibility)
+- BUG : correct redirection after identification
+
 ### version 0.1 (06/12/2011)
 
 - Slideshow in full screen
