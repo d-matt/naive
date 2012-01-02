@@ -3,8 +3,8 @@
 Theme Name: Naive
 Version: 0.0.1
 Description: Naive theme
-Theme URI: To be defined
-Author: Matt
+Theme URI: http://piwigo.org/ext/extension_view.php?eid=593
+Author: d-matt
 Author URI: https://github.com/d-matt/naive
 */
 
