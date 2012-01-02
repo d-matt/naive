@@ -368,6 +368,10 @@ ul.categoryActions select {
 /*************************/
 /* categories thumbnails */
 /*************************/
+ul#thumbnails {
+  margin: 0;
+  padding: 0;
+}
 figure.category {
   float: left;
   width: 360px;

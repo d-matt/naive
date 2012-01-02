@@ -29,7 +29,9 @@
 
   {if !empty($CATEGORIES)}{$CATEGORIES}{/if}
   {if !empty($THUMBNAILS)}
+  <ul id="thumbnails" class="thumbnails">
     {$THUMBNAILS}
+  </ul>
   {/if}
   <div class="clear center">
     {if !empty($navbar)}{include file='navigation_bar.tpl'|@get_extent:'navbar'}{/if}
