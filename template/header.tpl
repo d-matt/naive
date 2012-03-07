@@ -67,7 +67,7 @@
     {/foreach}
   {/if}
 </head>
-<body>
+<body id="{$BODY_ID}">
 <!--[if lte IE 8]>
   <div id="ie-message" class="error">
     {'ie_error'|@translate}

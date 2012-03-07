@@ -47,16 +47,20 @@ See <http://www.gnu.org/licenses/gpl.html>.
 Changelog
 ---------
 
-### version 0.3 (02/01/2012)
+### version 0.4 (2012/03/07)
+
+- Fix body's id
+
+### version 0.3 (2012/01/02)
 
 - Display thumbnails in a ul#thumbnails block to ensure plugins compatibility
 
-### version 0.2 (02/01/2012)
+### version 0.2 (2012/01/02)
 
 - Only mask nav buttons while displaying pictures (for plugins compatibility)
 - BUG : correct redirection after identification
 
-### version 0.1 (06/12/2011)
+### version 0.1 (2011/12/06)
 
 - Slideshow in full screen
 - Dingbat font for icons
@@ -64,7 +68,7 @@ Changelog
 - tags by letter style
 - inform internet explorer users that they should change for a modern browser
 
-### version 0.0.1 (18/10/2011)
+### version 0.0.1 (2011/10/18)
 
 - Initial release
 
