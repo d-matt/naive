@@ -21,8 +21,6 @@ $themeconf = array(
   'url' => 'https://github.com/d-matt/naive'
 );
 
-global $user;
-$user['maxwidth'] = 720;
 load_language('theme.lang', PHPWG_THEMES_PATH.'naive/');
 
 // debug - do not combine files

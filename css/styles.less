@@ -468,9 +468,14 @@ figure#image_wrapper {
   margin-bottom: 20px;
   position: relative;         // place the nav holder inside the picture
   margin: auto;               // center the picture
+  width: auto !important;
+  min-width: 360px;
   margin-bottom: 20px;
   overflow: hidden;             // to prevent breaking when overlapping with aside
   z-index: 1;                 // will go under the aside if window is too small
+  img {
+    width: 100%;
+  }
   figcaption {
       text-align: center;
       padding: 1em;

@@ -1,6 +1,6 @@
-<figure id="image_wrapper">
+<figure id="image_wrapper" style="max-width:{$WIDTH_IMG}px;">
   {if isset($previous)}<div id="go_to_prev_holder"></div>{/if}
-  <img id="subject" src="{$SRC_IMG}" alt="{$ALT_IMG}" style="width:{$WIDTH_IMG}px;height:{$HEIGHT_IMG}px;">
+  <img id="subject" src="{$SRC_IMG}" alt="{$ALT_IMG}">
   {if isset($next)}<div id="go_to_next_holder"></div>{/if}
   <figcaption>
     <div class="imageNumber right">{$PHOTO}</div>

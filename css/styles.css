@@ -9,10 +9,13 @@ a {
   color: #8f8f8f;
   text-decoration: none;
 }
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #ffaa00;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   padding: 0;
   font-size: 1em;
@@ -93,7 +96,9 @@ ul {
 .icon.star:before {
   content: '\22C6';
 }
-button, .button, .submit {
+button,
+.button,
+.submit {
   padding: 0.3em 0.8em;
   margin-right: 5px;
   background-color: #ededed;
@@ -101,7 +106,9 @@ button, .button, .submit {
   color: #8f8f8f;
   cursor: pointer;
 }
-button:hover, .button:hover, .submit:hover {
+button:hover,
+.button:hover,
+.submit:hover {
   color: #ffaa00;
 }
 form fieldset {
@@ -142,7 +149,8 @@ form select {
   border: 1px solid #c2c2c2;
   color: #8f8f8f;
 }
-form input[type="checkbox"], form input[type="radio"] {
+form input[type="checkbox"],
+form input[type="radio"] {
   vertical-align: middle;
 }
 form input[readonly] {
@@ -152,7 +160,8 @@ table {
   /* nullify default blueprint background color */
 
 }
-table tr:nth-child(2n) td, table tr.even td {
+table tr:nth-child(2n) td,
+table tr.even td {
   background: #e1e1e1;
 }
 .rot-90 {
@@ -220,14 +229,17 @@ header h2 {
 #the_page {
   background-color: #f5f5f5;
 }
-#content, #content_id {
+#content,
+#content_id {
   padding: 10px 30px 10px 30px;
   background-color: #f5f5f5;
 }
-#content.one_col, #content_id.one_col {
+#content.one_col,
+#content_id.one_col {
   margin-left: 0;
 }
-#content.two_col, #content_id.two_col {
+#content.two_col,
+#content_id.two_col {
   margin-left: 250px;
 }
 .titrePage {
@@ -239,7 +251,9 @@ header h2 {
   margin: 1em 0;
   display: inline;
 }
-.titrePage, .titrePage a, h3 {
+.titrePage,
+.titrePage a,
+h3 {
   font-weight: bold;
   text-transform: uppercase;
   font-variant: normal;
@@ -298,7 +312,8 @@ ul.categoryActions select {
 .toggle_button:hover {
   color: #ffaa00;
 }
-#toggle_info_bar, #menuswitcher {
+#toggle_info_bar,
+#menuswitcher {
   margin-top: 20px;
   padding: 5px;
   cursor: pointer;
@@ -308,7 +323,8 @@ ul.categoryActions select {
   background: #f5f5f5;
   font-weight: normal;
 }
-#toggle_info_bar:hover, #menuswitcher:hover {
+#toggle_info_bar:hover,
+#menuswitcher:hover {
   color: #ffaa00;
 }
 #toggle_info_bar {
@@ -356,7 +372,8 @@ ul.categoryActions select {
   clear: both;
   width: 125px;
 }
-#quickconnect input[type="text"], #quickconnect input[type="password"] {
+#quickconnect input[type="text"],
+#quickconnect input[type="password"] {
   width: 100%;
 }
 #quickconnect input[type="checkbox"] {
@@ -430,9 +447,14 @@ figure#image_wrapper {
   margin-bottom: 20px;
   position: relative;
   margin: auto;
+  width: auto !important;
+  min-width: 360px;
   margin-bottom: 20px;
   overflow: hidden;
   z-index: 1;
+}
+figure#image_wrapper img {
+  width: 100%;
 }
 figure#image_wrapper figcaption {
   text-align: center;
@@ -441,7 +463,8 @@ figure#image_wrapper figcaption {
 figure#image_wrapper figcaption .imageNumber {
   margin-top: -0.5em;
 }
-#go_to_prev_holder, #go_to_next_holder {
+#go_to_prev_holder,
+#go_to_next_holder {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -493,7 +516,8 @@ figure#image_wrapper figcaption .imageNumber {
 #rateForm {
   margin: 0;
 }
-#rateForm input, #rateForm input:active {
+#rateForm input,
+#rateForm input:active {
   cursor: pointer;
   border: none;
   padding: 0;
@@ -577,7 +601,8 @@ footer {
   display: inline-block;
   padding-right: 0.5em;
 }
-#menuTagCloud a:hover, #menuTagCloud a:focus {
+#menuTagCloud a:hover,
+#menuTagCloud a:focus {
   color: #ffaa00;
 }
 #menuTagCloud .tagLevel5 {
@@ -609,7 +634,8 @@ footer {
 #fullTagCloud span {
   margin: 5px;
 }
-#fullTagCloud a:hover, #fullTagCloud a:focus {
+#fullTagCloud a:hover,
+#fullTagCloud a:focus {
   color: #ffaa00;
 }
 #fullTagCloud .tagLevel5 {
@@ -653,7 +679,8 @@ footer {
   display: block;
   margin: 2px 0 0;
 }
-.calItem, .calItemEmpty {
+.calItem,
+.calItemEmpty {
   font-weight: bold;
   margin: 0 1px;
   border: 1px solid #8f8f8f;
@@ -695,7 +722,8 @@ TABLE.calMonth {
   /* nullify default blueprint background color */
 
 }
-TABLE.calMonth th, TABLE.calMonth td {
+TABLE.calMonth th,
+TABLE.calMonth td {
   padding: 1px;
   background: #f5f5f5;
 }
@@ -708,7 +736,8 @@ TABLE.calMonth td {
   height: 80px;
   width: 80px;
 }
-TABLE.calMonth tr:nth-child(2n) td, TABLE.calMonth tr.even td {
+TABLE.calMonth tr:nth-child(2n) td,
+TABLE.calMonth tr.even td {
   background: #f5f5f5;
 }
 TABLE.calMonth tr:nth-child(2n) td.calDayCellEmpty,
@@ -717,7 +746,8 @@ TABLE.calMonth tr:nth-child(2n) td.calDayCellFull,
 TABLE.calMonth tr.even td.calDayCellFull {
   background: #e1e1e1;
 }
-TABLE.calMonth TD.calDayCellFull, TABLE.calMonth TD.calDayCellEmpty {
+TABLE.calMonth TD.calDayCellFull,
+TABLE.calMonth TD.calDayCellEmpty {
   vertical-align: top;
   font-weight: bold;
   font-size: 18px;
