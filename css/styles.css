@@ -242,6 +242,13 @@ header h2 {
 #content_id.two_col {
   margin-left: 250px;
 }
+.additional_info {
+  font-style: italic;
+  line-height: 1.3em;
+  padding: 1em;
+  border-bottom: 1px solid #c2c2c2;
+  background-color: #fdfdfd;
+}
 .titrePage {
   margin-top: 1em;
   margin-bottom: 1em;

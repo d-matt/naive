@@ -27,7 +27,14 @@
   {/if}
   {* <--- Calendar view *}
 
+  {if !empty($CONTENT_DESCRIPTION)}
+  <div class="additional_info">
+        {$CONTENT_DESCRIPTION}
+  </div>
+  {/if}
+
   {if !empty($CATEGORIES)}{$CATEGORIES}{/if}
+
   {if !empty($THUMBNAILS)}
   <ul id="thumbnails" class="thumbnails">
     {$THUMBNAILS}
