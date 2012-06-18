@@ -28,8 +28,13 @@
         "height": h+'px',
         "margin-top": margin_top+"px"
       });
-    } 
-    resizeImg();
+    }
+    //hide image and wait for loading to complete
+    img.hide(); 
+    $(window).load(function() {
+      resizeImg();
+      img.show().fadeIn("normal");
+    });
     $(window).resize(function() {
       resizeImg();
     }); 
