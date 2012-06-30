@@ -2,9 +2,9 @@
 {foreach from=$comments item=comment name=comment_loop}
   <li>
     <div class="comment {if $smarty.foreach.comment_loop.index is odd}odd{else}even{/if}">
-    {if isset($comment.TN_SRC)}
+    {if isset($comment.src_image)}
       <div class="illustration">
-        <a href="{$comment.U_PICTURE}"><img src="{$comment.TN_SRC}" alt="{$comment.ALT}"></a>
+        <a href="{$comment.U_PICTURE}"><img src="{$pwg->derivative_url($derivative_params, $comment.src_image)}" alt="{$comment.ALT}"></a>
       </div>
     {/if}
     {if isset($comment.U_DELETE) or isset($comment.U_VALIDATE) or isset($comment.U_EDIT) }

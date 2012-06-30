@@ -1,9 +1,10 @@
 {if !empty($thumbnails)}
   {foreach from=$thumbnails item=thumbnail name="thumb_loop"}
+  {assign var=derivative value=$pwg->derivative($derivative_params, $thumbnail.src_image)}
   <li>
     <figure class="picture_item">
       <a href="{$thumbnail.URL}">
-        <img class="thumbnail" src="{$thumbnail.TN_SRC}" alt="{$thumbnail.TN_ALT}" title="{$thumbnail.TN_TITLE}">
+        <img class="thumbnail" {if !$derivative->is_cached()}data-{/if} src="{$derivative->get_url()}" alt="{$thumbnail.TN_ALT}" title="{$thumbnail.TN_TITLE}">
       </a>
       {if $SHOW_THUMBNAIL_CAPTION }
         <figcaption>

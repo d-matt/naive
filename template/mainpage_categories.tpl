@@ -1,7 +1,7 @@
 {foreach from=$category_thumbnails item=cat name="cat_loop"}
 <figure class="category">
   <a href="{$cat.URL}">
-    <img class="left thumbnail" src="{$cat.TN_SRC}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}">
+    <img class="left thumbnail" src="{$pwg->derivative_url($derivative_params, $cat.representative.src_image)}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '|@strip_tags:false} - {'display this album'|@translate}">
   </a>
   <figcaption>
     <h3>
