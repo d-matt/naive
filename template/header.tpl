@@ -32,6 +32,7 @@
   {if isset($next.U_IMG)    }<link rel="next" title="{'Next'|@translate}" href="{$next.U_IMG}" >{/if}
   {if isset($U_UP)          }<link rel="index" title="{'Thumbnails'|@translate}" href="{$U_UP}" >{/if}
   {if isset($U_PREFETCH)    }<link rel="prefetch" href="{$U_PREFETCH}">{/if}
+  {if isset($U_CANONICAL)   }<link rel="canonical" href="{$U_CANONICAL}">{/if}
 
 {* get_combined_css HAS to be on first col, otherwise LocalFile Editor Plugin 
    won't be able to place its rules ... (!!) *}
