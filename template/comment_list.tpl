@@ -29,6 +29,7 @@
           <textarea name="content" id="contenteditid">{$comment.CONTENT|@escape}</textarea>
           <input type="hidden" name="key" value="{$comment.KEY}">
           <input type="hidden" name="image_id" value="{$comment.IMAGE_ID|@default:$current.id}">
+          <input type="hidden" name="pwg_token" value="{$comment.PWG_TOKEN}">
           <button class="submit icon check" type="submit">{'Submit'|@translate}</button>
           <button class="icon x">{'Cancel'|@translate}</button>
         </fieldset>
