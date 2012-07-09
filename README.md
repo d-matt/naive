@@ -47,6 +47,12 @@ See <http://www.gnu.org/licenses/gpl.html>.
 Changelog
 ---------
 
+### version 0.5 (2012/07/09)
+
+- Piwigo 2.4 compatibility
+- Adapt the picture size to the available place
+- Display the category description on thumbnails view
+
 ### version 0.4 (2012/03/07)
 
 - Fix body's id
