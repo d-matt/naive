@@ -1,3 +1,4 @@
+{define_derivative name='derivative_params' width=125 height=125 crop=true}
 {if !empty($thumbnails)}
   {foreach from=$thumbnails item=thumbnail name="thumb_loop"}
   {assign var=derivative value=$pwg->derivative($derivative_params, $thumbnail.src_image)}
