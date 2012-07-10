@@ -422,6 +422,11 @@ figure.category figcaption {
   text-align: center;
   vertical-align: baseline;
 }
+.picture_item figcaption {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .navigationBar {
   color: #cfcfcf;
 }
