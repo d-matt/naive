@@ -61,12 +61,12 @@
     </p>
   </form>
 
-  {if !empty($navbar) }{include file='navigation_bar.tpl'|@get_extent:'navbar'}{/if}
-
   {if isset($comments)}
   <div id="comments">
     {include file='comment_list.tpl'}
   </div>
   {/if}
-  <div class="clear"></div>
+  <div class="clear center">
+    {if !empty($navbar) }{include file='navigation_bar.tpl'|@get_extent:'navbar'}{/if}
+  </div>
 </div> <!-- content -->
