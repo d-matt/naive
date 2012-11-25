@@ -10,6 +10,8 @@
   <h2><a href="{$U_HOME}" title="{'Home'|@translate}">{'Home'|@translate}</a> / {'Tags'|@translate}</h2>
 </div>
 
+{include file='infos_errors.tpl'}
+
 {if isset($MENUBAR)}{$MENUBAR}{/if}
 <div id="content" class="two_col">
 {if isset($tags)}

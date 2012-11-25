@@ -19,6 +19,8 @@
 </div>
 {* --- *}
 
+{include file='infos_errors.tpl'}
+
 <div id="content" class="two_col">
   {if !empty($PLUGIN_INDEX_CONTENT_BEGIN)}{$PLUGIN_INDEX_CONTENT_BEGIN}{/if}
   {* ---> Calendar view ---*}

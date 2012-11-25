@@ -4,6 +4,8 @@
     <h2><a href="{$U_HOME}" title="{'Home'|@translate}">{'Home'|@translate}</a> / {'User comments'|@translate}</h2>
   </div>
 
+  {include file='infos_errors.tpl'}
+
   <form class="filter" action="{$F_ACTION}" method="get">
     <fieldset>
       <legend>{'Filter'|@translate}</legend>

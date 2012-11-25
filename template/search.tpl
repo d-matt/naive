@@ -10,6 +10,8 @@
     <h2><a href="{$U_HOME}" title="{'Home'|@translate}">{'Home'|@translate}</a> / {'Search'|@translate}</h2>
   </div>
 
+  {include file='infos_errors.tpl'}
+
   <form class="filter" method="post" id="search_form" name="search" action="{$F_SEARCH_ACTION}">
     <fieldset>
       <legend>{'Filter'|@translate}</legend>

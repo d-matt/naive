@@ -4,6 +4,8 @@
     <h2><a href="{$U_HOME}" title="{'Home'|@translate}">{'Home'|@translate}</a> / {$title}</h2>
   </div>
 
+{include file='infos_errors.tpl'}
+
 {if $action ne 'none'}
   <form id="lostPassword" action="{$form_action}?action={$action}{if isset($key)}&amp;key={$key}{/if}" method="post">
     <input type="hidden" name="pwg_token" value="{$PWG_TOKEN}">

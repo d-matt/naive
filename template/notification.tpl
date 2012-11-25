@@ -8,6 +8,8 @@
     <h2><a href="{$U_HOME}" title="{'Home'|@translate}">{'Home'|@translate}</a> / {'Notification'|@translate}</h2>
   </div>
 
+  {include file='infos_errors.tpl'}
+
   <p>{'The RSS notification feed provides notification on news from this website : new photos, updated albums, new comments. Use a RSS feed reader.'|@translate}</p>
 
   <ul>

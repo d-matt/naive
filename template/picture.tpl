@@ -1,6 +1,7 @@
 {combine_script id='naive.pict_navigation' path='themes/naive/js/pict_navigation.js'}
 {combine_script id='rating' path='themes/default/js/rating.js'}
 {if !empty($PLUGIN_PICTURE_BEFORE)}{$PLUGIN_PICTURE_BEFORE}{/if}
+{include file='infos_errors.tpl'}
 <aside id="imageInfoBar">
   {include file='picture_nav_buttons.tpl'|@get_extent:'picture_nav_buttons'}
   <div id="randomButtons">

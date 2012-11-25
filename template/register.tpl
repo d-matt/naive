@@ -4,15 +4,7 @@
     <h2><a href="{$U_HOME}" title="{'Home'|@translate}">{'Home'|@translate}</a> / {'Registration'|@translate}</h2>
   </div>
 
-{if isset($errors)}
-  <div class="errors">
-    <ul>
-      {foreach from=$errors item=error}
-      <li>{$error}</li>
-      {/foreach}
-    </ul>
-  </div>
-{/if}
+  {include file='infos_errors.tpl'}
 
   <form method="post" action="{$F_ACTION}" class="properties" name="register_form" id="register_form">
     <fieldset>
