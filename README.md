@@ -47,6 +47,11 @@ See <http://www.gnu.org/licenses/gpl.html>.
 Changelog
 ---------
 
+### version 0.6 (2012/11/25)
+
+- Correct the fixed the thumbnail size
+- Diplay errors and infos when availble 
+
 ### version 0.5 (2012/07/09)
 
 - Piwigo 2.4 compatibility
