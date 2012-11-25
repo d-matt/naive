@@ -1,7 +1,7 @@
 <?php
 /*
 Theme Name: Naive
-Version: 0.5
+Version: 0.6
 Description: Naive theme
 Theme URI: http://piwigo.org/ext/extension_view.php?eid=593
 Author: d-matt
