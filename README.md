@@ -49,8 +49,8 @@ Changelog
 
 ### version 0.6 (2012/11/25)
 
-- Correct the fixed the thumbnail size
-- Diplay errors and infos when availble 
+- Correct the fixed thumbnail size
+- Display errors and infos when available 
 
 ### version 0.5 (2012/07/09)
 
