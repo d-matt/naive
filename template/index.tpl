@@ -37,13 +37,20 @@
 
   {if !empty($CATEGORIES)}{$CATEGORIES}{/if}
 
+  {if !empty($cats_navbar)}
+    {include file='navigation_bar.tpl'|@get_extent:'navbar' navbar=$cats_navbar}
+  {/if}
+
+
   {if !empty($THUMBNAILS)}
   <ul id="thumbnails" class="thumbnails">
     {$THUMBNAILS}
   </ul>
   {/if}
   <div class="clear center">
-    {if !empty($navbar)}{include file='navigation_bar.tpl'|@get_extent:'navbar'}{/if}
+    {if !empty($thumb_navbar)}
+      {include file='navigation_bar.tpl'|@get_extent:'navbar' navbar=$thumb_navbar}
+    {/if}
   </div>
   {if !empty($PLUGIN_INDEX_CONTENT_END)}{$PLUGIN_INDEX_CONTENT_END}{/if}
 </div>
