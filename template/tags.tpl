@@ -18,7 +18,7 @@
   {if $display_mode == 'cloud'}
   <div id="fullTagCloud">
     {foreach from=$tags item=tag}
-		<span><a href="{$tag.URL}" class="tagLevel{$tag.level}" title="{$pwg->l10n_dec('%d photo', '%d photos', $tag.counter)}">{$tag.name}</a></span>
+		<span><a href="{$tag.URL}" class="tagLevel{$tag.level}" title="{$tag.counter|@translate_dec:'%d photo':'%d photos'}">{$tag.name}</a></span>
     {/foreach}
   </div>
   {/if}
@@ -31,7 +31,7 @@
         {foreach from=$letter.tags item=tag}
         <tr>
           <td><a href="{$tag.URL}">{$tag.name}</a></td>
-          <td class="nbEntries">{$pwg->l10n_dec('%d photo', '%d photos', $tag.counter)}</td>
+          <td class="nbEntries">{$tag.counter|@translate_dec:'%d photo':'%d photos'}</td>
         </tr>
         {/foreach}
       </table>

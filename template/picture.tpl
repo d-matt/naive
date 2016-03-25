@@ -1,3 +1,43 @@
+{combine_script id='jquery.colorbox' load='footer' require='jquery' path='themes/default/js/plugins/jquery.colorbox.min.js'}
+{combine_css id='colorbox' path='themes/default/js/plugins/colorbox/style2/colorbox.css'}
+
+{if !empty($current.formats)}
+{footer_script require='jquery'}{literal}
+jQuery().ready(function() {
+  jQuery("#downloadSwitchLink").colorbox({
+    inline:true,
+    href:"#downloadSwitchBox"
+  });
+});
+{/literal}{/footer_script}
+
+{html_style}
+#downloadSwitchBox {
+  color:black;
+  padding:15px;
+}
+
+#downloadSwitchBox a {
+  color:black;
+}
+
+.switchBoxTitle {
+  margin-bottom:5px;
+}
+{/html_style}
+
+<div style="display:none">
+<div id="downloadSwitchBox">
+  <div class="switchBoxTitle">{'Download'|translate} - {'Formats'|translate}</div>
+  <ul>
+  {foreach from=$current.formats item=format}
+    <li><a href="{$format.download_url}" rel="nofollow">{$format.label}<span class="downloadformatDetails"> ({$format.filesize})</span></a></li>
+  {/foreach}
+  </ul>
+</div>
+</div>
+{/if} {* has formats *}
+
 {combine_script id='naive.pict_navigation' path='themes/naive/js/pict_navigation.js'}
 {combine_script id='rating' path='themes/default/js/rating.js'}
 {if !empty($PLUGIN_PICTURE_BEFORE)}{$PLUGIN_PICTURE_BEFORE}{/if}
@@ -21,8 +61,9 @@
       </li>
       {/if}
       {if isset($current.U_DOWNLOAD) }
-      <li><a href="{$current.U_DOWNLOAD}" title="{'download this file'|@translate}">{'download'|@translate}</a></li>
+      <li><a id="downloadSwitchLink" href="{$current.U_DOWNLOAD}" title="{'Download this file'|@translate}">{'Download'|@translate}</a></li>
       {/if}
+      {if isset($PLUGIN_PICTURE_BUTTONS)}{foreach from=$PLUGIN_PICTURE_BUTTONS item=button}{$button}{/foreach}{/if}
       {if isset($PLUGIN_PICTURE_ACTIONS)}{$PLUGIN_PICTURE_ACTIONS}{/if}
       {if isset($favorite) }
       <li><a href="{$favorite.U_FAVORITE}">{if $favorite.IS_FAVORITE}{'delete this photo from your favorites'|@translate}{else}{'add this photo to your favorites'|@translate}{/if}</a></li>
@@ -31,7 +72,7 @@
       <li><a href="{$U_SET_AS_REPRESENTATIVE}" title="{'set as album representative'|@translate}">{'representative'|@translate}</a></li>
       {/if}
       {if isset($U_ADMIN) }
-      <li><a href="{$U_ADMIN}" title="{'Modify information'|@translate}">{'Modify information'|@translate}</a></li>
+      <li><a href="{$U_ADMIN}" title="{'Edit photo'|@translate}">{'Edit'|@translate}</a></li>
       {/if}
     </ul>
   </div>
@@ -147,6 +188,14 @@
       {if $comment_add.SHOW_AUTHOR}
         <label>{'Author'|@translate}</label>
         <input type="text" name="author">
+      {/if}
+      {if $comment_add.SHOW_EMAIL}
+        <label for="email">{'Email address'|@translate}{if $comment_add.EMAIL_MANDATORY} ({'mandatory'|@translate}){/if}</label>
+        <input type="text" name="email" id="email" value="{$comment_add.EMAIL}">
+      {/if}
+      {if $comment_add.SHOW_WEBSITE}
+        <label for="website_url">{'Website'|@translate}</label>
+        <input type="text" name="website_url" id="website_url" value="{$comment_add.WEBSITE_URL}">
       {/if}
         <textarea name="content" id="contentid">{$comment_add.CONTENT}</textarea>
         <input type="hidden" name="key" value="{$comment_add.KEY}">

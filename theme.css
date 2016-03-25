@@ -1,1 +1,10 @@
 /*empty css to as this file is expected by piwigo*/
+
+#addComment label {
+  width:auto;
+}
+
+#addComment input[type="text"] {
+  width:200px;
+  margin-right:2em;
+}
