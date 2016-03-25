@@ -18,6 +18,7 @@ $themeconf = array(
   'admin_icon_dir' => 'themes/default/icon/admin',
   'mime_icon_dir' => 'themes/default/icon/mimetypes/',
   'local_head' => 'local_head.tpl',
+  'colorscheme' => 'clear',
   'url' => 'https://github.com/d-matt/naive'
 );
 
